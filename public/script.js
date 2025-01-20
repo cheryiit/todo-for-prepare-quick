@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM Content Loaded');
     const todoContainer = document.getElementById('todo-container');
+    console.log('Todo container:', todoContainer);
+    console.log('Todo data:', todoData);
 
     // Generate HTML for todo items
     function generateTodoHTML() {
+        console.log('Generating HTML');
         let html = '';
         
         // Generate chapters
@@ -50,14 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
             html += `</div>`;
         }
         
+        console.log('Generated HTML length:', html.length);
         return html;
     }
 
     // Render todo items
     todoContainer.innerHTML = generateTodoHTML();
+    console.log('HTML rendered');
 
     // Handle checkbox states
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    console.log('Found checkboxes:', checkboxes.length);
     
     // Load saved states from localStorage
     checkboxes.forEach(checkbox => {
