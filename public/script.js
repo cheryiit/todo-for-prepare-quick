@@ -37,8 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <div class="subtodos">
                                         ${item.subItems.map(subItem => `
                                             <div class="subtodo-item">
-                                                <input type="checkbox" id="${subItem.id}">
-                                                <label for="${subItem.id}">${subItem.text}</label>
+                                                <div>
+                                                    <input type="checkbox" id="${subItem.id}">
+                                                    <label for="${subItem.id}">${subItem.text}</label>
+                                                </div>
+                                                ${subItem.description ? `<div class="todo-description">${subItem.description}</div>` : ''}
                                             </div>
                                         `).join('')}
                                     </div>

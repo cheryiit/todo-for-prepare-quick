@@ -70,6 +70,7 @@ h3 {
     font-size: 0.9rem;
     color: #9ca3af;
     margin: 0.3rem 0 0.3rem 2.2rem;
+    line-height: 1.4;
 }
 
 .subtodos {
@@ -79,15 +80,29 @@ h3 {
 
 .subtodo-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 0.3rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.8rem;
     border-radius: 3px;
     transition: background-color 0.2s;
 }
 
 .subtodo-item:hover {
     background-color: #363636;
+}
+
+.subtodo-item > div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.subtodo-item .todo-description {
+    margin-left: 2.2rem;
+    margin-top: 0.3rem;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    border-left: 2px solid #404040;
+    padding-left: 1rem;
 }
 
 input[type="checkbox"] {
