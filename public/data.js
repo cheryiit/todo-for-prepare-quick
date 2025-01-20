@@ -7,16 +7,16 @@ const todoData = {
                 "items": [
                     {
                         "id": "bfs-dfs",
-                        "text": "BFS ve DFS Algoritmaları",
-                        "description": "Graf teoride temel kavramlar olan Genişlik Öncelikli Arama (BFS) ve Derinlik Öncelikli Arama (DFS) algoritmaları",
+                        "text": "BFS ve DFS Algoritmalarına Kadar Geldik",
+                        "description": "Graf (graph) teoride temel kavramlar olan Genişlik Öncelikli Arama (BFS) ve Derinlik Öncelikli Arama (DFS) algoritmaları",
                         "subItems": [
                             {
                                 "id": "bfs",
-                                "text": "3.5.1 Breadth-First Search (BFS)"
+                                "text": "3.5.1 Breadth-First Search (BFS) - Genişlik Öncelikli Arama"
                             },
                             {
                                 "id": "dfs",
-                                "text": "3.5.2 Depth-First Search (DFS)"
+                                "text": "3.5.2 Depth-First Search (DFS) - Derinlik Öncelikli Arama"
                             }
                         ]
                     }
@@ -27,20 +27,23 @@ const todoData = {
                 "items": [
                     {
                         "id": "mst-algorithms",
-                        "text": "Minimum Spanning Tree Algoritmaları",
-                        "description": "MST bulma algoritmaları ve özellikleri",
+                        "text": "Minimum Spanning Tree (MST) Algoritmaları",
+                        "description": "Minimum ağırlıklı spanning tree'leri (MST) bulma algoritmaları ve temel özellikleri",
                         "subItems": [
                             {
                                 "id": "prims",
-                                "text": "Prim's MST Algoritması: Greedy yaklaşımla minimum ağırlıklı spanning tree bulma"
+                                "text": "Prim's MST Algoritması",
+                                "description": "Bir grafikteki tüm nodları birleştiren ve toplam kenar ağırlığı minimum olan spanning tree'yi bulmak için kullanılan açgözlü (greedy) algoritma"
                             },
                             {
                                 "id": "kruskal",
-                                "text": "Kruskal Algoritması: Edge sort edip minimum subtree oluşturma"
+                                "text": "Kruskal Algoritması",
+                                "description": "Kenarları ağırlıklarına göre sıralayarak ve döngü (cycle) oluşturmayacak şekilde minimum spanning tree oluşturma"
                             },
                             {
                                 "id": "unique-weights",
-                                "text": "Ağırlıklar unique olduğunda spanning tree'nin uniqueliği"
+                                "text": "Unique Ağırlıklar Durumu",
+                                "description": "Bir graphdaki tüm edge'lerin ağırlıkları unique (tek) ise, spanning tree'nin de unique olacağı durumu"
                             }
                         ]
                     }
@@ -52,11 +55,12 @@ const todoData = {
                     {
                         "id": "reduction",
                         "text": "Reduction ve İspat",
-                        "description": "3.8.2 Graph problemlerinin zorluk dereceleri ve reduction teknikleri",
+                        "description": "3.8.2 Graph problemlerinin zorluk dereceleri ve reduction teknikleri ile ispat yöntemleri",
                         "subItems": [
                             {
                                 "id": "parallel",
-                                "text": "3.11 Paralel İşlemler (İşlenmedi)"
+                                "text": "3.11 Paralel İşlemler (İşlenmedi)",
+                                "description": "Paralel algoritmalar konusu işlenmedi. Kitabın 3.11 bölümünde genel bilgi bulunmaktadır"
                             }
                         ]
                     }
@@ -73,8 +77,7 @@ const todoData = {
                     {
                         "id": "degree-sequence-main",
                         "text": "Degree Sequence (Derece Dizisi)",
-                        "description": "Grafikteki nodların derecelerinin sıralanması ve topoloji analizi",
-                        "subItems": []
+                        "description": "Bir grafikteki nodların derecelerinin azalan veya artan şekilde sıralanmış hali. Grafın yapısı ve topolojisi hakkında bilgi verir"
                     }
                 ]
             },
@@ -84,8 +87,7 @@ const todoData = {
                     {
                         "id": "clustering-main",
                         "text": "Clustering Coefficient Hesaplama",
-                        "description": "Nodların etrafındaki komşu nodların bağlantı yoğunluğu ölçümü ve kolay hesaplama yöntemi",
-                        "subItems": []
+                        "description": "Bir nodun etrafındaki komşu nodların kendi aralarındaki bağlantı yoğunluğunu ölçen kümeleme katsayısının (clustering coefficient) kolay hesaplama yöntemi"
                     }
                 ]
             },
@@ -95,8 +97,7 @@ const todoData = {
                     {
                         "id": "matching-main",
                         "text": "Matching Index",
-                        "description": "İki nodun ortak komşularının sayısının total komşu sayısına oranı ve topolojik benzerlik ölçümü",
-                        "subItems": []
+                        "description": "İki nodun ortak komşularının sayısının total komşu sayısına oranını gösteren ve nodların topolojik benzerliğini ölçen metrik"
                     }
                 ]
             },
@@ -106,15 +107,17 @@ const todoData = {
                     {
                         "id": "pref-attachment",
                         "text": "Preferential Attachment Rule",
-                        "description": "Derecesi yüksek olan nodlara bağlanma olasılığı ve scale-free networkler",
+                        "description": "Tercihli bağlanma kuralı: Yeni nodların, derecesi yüksek nodlara bağlanma olasılığının yüksek olduğu, scale-free networklerin oluşumunu açıklayan kural (Kitap 4.9)",
                         "subItems": [
                             {
                                 "id": "vertex-degree",
-                                "text": "Vertex Degree: Nodların bağlantı sayısı"
+                                "text": "Vertex Degree (Nod Derecesi)",
+                                "description": "Bir nodun sahip olduğu toplam bağlantı sayısı"
                             },
                             {
                                 "id": "all-degrees",
-                                "text": "Tüm Dereceler: Scale-free ağ yapısı analizi"
+                                "text": "Tüm Dereceler",
+                                "description": "Grafteki tüm nodların dereceleri ve scale-free ağ yapısı analizi"
                             }
                         ]
                     }
@@ -131,15 +134,22 @@ const todoData = {
                     {
                         "id": "dijkstra-main",
                         "text": "Dijkstra Algoritması",
-                        "description": "Dijkstra algoritmasının çalışma mantığı ve prensipleri",
+                        "description": "Dijkstra algoritmasının çalışma mantığı ve temel prensipleri (Kitap 5.2.2)",
                         "subItems": [
                             {
                                 "id": "distance-vectors",
-                                "text": "Distance Vektörlerin Bulunması"
+                                "text": "Distance Vektörlerin Bulunması",
+                                "description": "Mesafe vektörlerinin elde edilmesi ve kullanımı"
+                            },
+                            {
+                                "id": "shortest-path",
+                                "text": "Shortest Path Kavramları",
+                                "description": "En kısa yol ile ilgili temel kavramlar"
                             },
                             {
                                 "id": "all-pairs",
-                                "text": "All-Pairs Shortest Path ve Floyd-Warshall Algoritması"
+                                "text": "All-Pairs Shortest Path",
+                                "description": "Tüm nod çiftleri arasındaki en kısa mesafenin hesaplanması (Floyd-Warshall Algoritması, Kitap 5.2.3)"
                             }
                         ]
                     }
@@ -151,19 +161,29 @@ const todoData = {
                     {
                         "id": "centrality-main",
                         "text": "Centrality Ölçümleri",
-                        "description": "Nodların ve edge'lerin önem ölçümleri",
+                        "description": "Bir networkdeki nodların veya edge'lerin önemini ölçmek için kullanılan metrikler (Kitap 4.5 ve 5.3)",
                         "subItems": [
                             {
                                 "id": "degree-centrality",
-                                "text": "Degree Centrality: Bağlantı sayısı bazlı önem"
+                                "text": "Degree Centrality",
+                                "description": "Bir nodun sahip olduğu bağlantı sayısına dayalı önem ölçümü"
                             },
                             {
                                 "id": "closeness",
-                                "text": "Closeness Centrality: 1/Distance toplamı ile uzaklık ölçümü"
+                                "text": "Closeness Centrality",
+                                "description": "Bir nodun diğer tüm nodlara olan ortalama uzaklığını ölçen metrik (1/Distance toplamı, Kitap 5.3.2)"
                             },
                             {
                                 "id": "betweenness",
-                                "text": "Betweenness Centrality: Shortest path'lerde bulunma sıklığı"
+                                "text": "Betweenness Centrality",
+                                "description": "Bir nodun ne kadar fazla shortest pathte yer aldığını ölçen metrik (Kitap 5.3.4)",
+                                "subItems": [
+                                    {
+                                        "id": "shortest-paths-order",
+                                        "text": "Shortest Pathlerin Kullanım Sırası",
+                                        "description": "Betweenness Centrality hesaplanırken tüm en kısa yolların dikkate alınma sırası ve yöntemi"
+                                    }
+                                ]
                             }
                         ]
                     }
