@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    color: #60a5fa;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.chapter {
+    background: #2d2d2d;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #60a5fa;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #404040;
+}
+
+.section {
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #93c5fd;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.todo-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.todo-item:hover {
+    background-color: #363636;
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-description {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin: 0.3rem 0 0.3rem 2.2rem;
+}
+
+.subtodos {
+    margin-left: 2.2rem;
+    margin-top: 0.5rem;
+}
+
+.subtodo-item {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+    margin-bottom: 0.4rem;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.subtodo-item:hover {
+    background-color: #363636;
+}
+
+input[type="checkbox"] {
+    margin-right: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    accent-color: #60a5fa;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+label {
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem auto;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .chapter {
+        padding: 1rem;
+    }
+    
+    .todo-item {
+        padding: 0.3rem;
+    }
+    
+    .subtodos {
+        margin-left: 1.8rem;
+    }
+} 
