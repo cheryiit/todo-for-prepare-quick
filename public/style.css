@@ -93,7 +93,7 @@ h3 {
 
 .subtodo-item > div:first-child {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .subtodo-item .todo-description {
