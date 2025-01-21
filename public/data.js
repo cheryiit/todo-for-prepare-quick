@@ -12,18 +12,18 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "centroid-calc",
-                                "text": "Centroid Hesaplama",
-                                "description": "n elemanlı clusterdaki her noktanın koordinatlarının ortalamasını alma işlemi - O(n) karmaşıklık."
+                                "text": "1. Centroid Hesaplama - O(n)",
+                                "description": "1) Her nokta için x,y koordinatlarını topla\n2) Toplam koordinatları nokta sayısına böl\n3) Karmaşıklık: Her nokta için sabit işlem = O(n)"
                             },
                             {
                                 "id": "radius-calc",
-                                "text": "Radius Hesaplama",
-                                "description": "Centroid'den en uzak noktayı bulma işlemi - Her nokta için centroid'e uzaklık hesabı - O(n) karmaşıklık."
+                                "text": "2. Radius Hesaplama - O(n)",
+                                "description": "1) Centroid'i hesapla - O(n)\n2) Her nokta için centroid'e uzaklık hesapla - O(n)\n3) Maximum uzaklığı bul - O(n)\n4) Toplam karmaşıklık: O(n)"
                             },
                             {
                                 "id": "diameter-calc",
-                                "text": "Diameter Hesaplama",
-                                "description": "Cluster içindeki en uzak iki noktayı bulma - Her nokta çifti için uzaklık hesabı - O(n²) karmaşıklık."
+                                "text": "3. Diameter Hesaplama - O(n²)",
+                                "description": "1) Her nokta çifti için uzaklık hesapla - O(n²)\n2) Maximum uzaklığı bul - O(1)\n3) Toplam karmaşıklık: O(n²)"
                             }
                         ]
                     },
@@ -34,18 +34,18 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "agglomerative",
-                                "text": "Agglomerative Clustering",
-                                "description": "Her adımda en yakın iki cluster'ı birleştirme - O(n³) karmaşıklık (mesafe matrisi hesaplama ve güncelleme)."
+                                "text": "1. Agglomerative Clustering - O(n³)",
+                                "description": "1) Başlangıç mesafe matrisi hesaplama - O(n²)\n2) Her iterasyonda:\n   - En yakın iki cluster'ı bul - O(n²)\n   - Mesafe matrisini güncelle - O(n)\n3) n-1 iterasyon\n4) Toplam karmaşıklık: O(n³)"
                             },
                             {
                                 "id": "kmeans",
-                                "text": "K-Means Clustering",
-                                "description": "Her iterasyonda her nokta için en yakın centroid'i bulma - O(k*n*t) karmaşıklık."
+                                "text": "2. K-Means Clustering - O(k*n*t)",
+                                "description": "1) Her iterasyonda:\n   - Her nokta için en yakın centroid'i bul - O(k*n)\n   - Centroid'leri güncelle - O(n)\n2) t iterasyon\n3) Toplam karmaşıklık: O(k*n*t)"
                             },
                             {
                                 "id": "kmedoid",
-                                "text": "K-Medoid Clustering",
-                                "description": "Her iterasyonda her medoid için tüm noktalarla mesafe hesabı - O(k*n²*t) karmaşıklık."
+                                "text": "3. K-Medoid Clustering - O(k*n²*t)",
+                                "description": "1) Her iterasyonda:\n   - Her medoid için tüm noktalarla mesafe hesabı - O(k*n²)\n   - Yeni medoid seçimi - O(n)\n2) t iterasyon\n3) Toplam karmaşıklık: O(k*n²*t)"
                             }
                         ]
                     },
@@ -56,13 +56,13 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "convex-definition",
-                                "text": "Convex/Non-convex Tanımı",
-                                "description": "Konveks kümelerde herhangi iki nokta arasındaki doğru parçası kümenin içinde kalır."
+                                "text": "1. Convex/Non-convex Tanımı",
+                                "description": "1) Convex küme: İki nokta arası doğru parçası küme içinde\n2) Non-convex küme: İki nokta arası doğru parçası küme dışına çıkabilir"
                             },
                             {
                                 "id": "kmedoid-capability",
-                                "text": "K-Medoid Yeteneği",
-                                "description": "K-Medoid, medoid noktaları kullanarak non-convex kümeleri temsil edebilir - İfade yanlıştır."
+                                "text": "2. K-Medoid Analizi",
+                                "description": "1) İfade yanlıştır\n2) K-Medoid medoid noktaları kullanarak non-convex kümeleri temsil edebilir\n3) Örnek: U şeklindeki küme birden fazla medoid ile temsil edilebilir"
                             }
                         ]
                     }
@@ -83,13 +83,18 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "error-minimization",
-                                "text": "Hata Minimizasyonu Garantisi",
-                                "description": "Delta Rule her zaman hata sayısını minimize etmez - Lokal minimumlara takılabilir."
+                                "text": "1. İfadenin Analizi",
+                                "description": "1) İfade yanlıştır\n2) Delta Rule her zaman global minimuma ulaşamaz\n3) Lokal minimumlara takılabilir"
                             },
                             {
                                 "id": "convergence",
-                                "text": "Yakınsama Analizi",
-                                "description": "Lineer ayrılabilir problemlerde yakınsama garantisi vardır, diğer durumlarda yoktur."
+                                "text": "2. Yakınsama Koşulları",
+                                "description": "1) Lineer ayrılabilir problemlerde yakınsama garantisi var\n2) Lineer ayrılamayan problemlerde yakınsama garantisi yok\n3) Öğrenme oranı seçimi önemli"
+                            },
+                            {
+                                "id": "limitations",
+                                "text": "3. Kısıtlamalar",
+                                "description": "1) Gradyan iniş tabanlı optimizasyon\n2) Başlangıç ağırlıklarına bağımlılık\n3) Öğrenme oranına hassasiyet"
                             }
                         ]
                     }
@@ -109,14 +114,19 @@ const todoData = {
                         "description": "ID3 algoritmasının küçük ağaçları tercih etme eğilimi analizi.",
                         "subItems": [
                             {
-                                "id": "bias-analysis",
-                                "text": "Bias Analizi",
-                                "description": "ID3 her zaman küçük ağaçları tercih etmez - Information Gain'e göre seçim yapar."
+                                "id": "bias-statement",
+                                "text": "1. İfadenin Analizi",
+                                "description": "1) İfade yanlıştır\n2) ID3 information gain'e göre seçim yapar\n3) Küçük ağaç tercihi dolaylı bir sonuçtur"
                             },
                             {
-                                "id": "performance-relation",
-                                "text": "Performans İlişkisi",
-                                "description": "Ağaç büyüdükçe öğrenme artar fakat genelleme performansı düşebilir."
+                                "id": "tree-growth",
+                                "text": "2. Ağaç Büyümesi",
+                                "description": "1) Ağaç büyüdükçe öğrenme performansı artar\n2) Aşırı büyüme overfitting'e neden olur\n3) Durdurma kriterleri önemlidir"
+                            },
+                            {
+                                "id": "performance-balance",
+                                "text": "3. Performans Dengesi",
+                                "description": "1) Öğrenme-genelleme dengesi\n2) Hata ve tesadüfleri öğrenme riski\n3) Information gain hızlı daralması önemli"
                             }
                         ]
                     },
@@ -126,14 +136,19 @@ const todoData = {
                         "description": "Information Gain'in az değer alan özellikleri tercih etme eğilimi.",
                         "subItems": [
                             {
-                                "id": "value-preference",
-                                "text": "Değer Tercihi",
-                                "description": "Az değer alan özellikler daha yüksek information gain üretme eğilimindedir."
+                                "id": "bias-explanation",
+                                "text": "1. Bias Analizi",
+                                "description": "1) İfade doğrudur\n2) Az değerli özellikler daha yüksek gain üretir\n3) Entropi hesabından kaynaklanan doğal bias"
+                            },
+                            {
+                                "id": "gain-calculation",
+                                "text": "2. Gain Hesaplama",
+                                "description": "1) Entropi bazlı hesaplama\n2) Değer sayısı arttıkça entropi artar\n3) Gain değeri düşer"
                             },
                             {
                                 "id": "bias-impact",
-                                "text": "Bias Etkisi",
-                                "description": "Bu bias, gereksiz karmaşık ağaçların oluşmasını engelleyebilir."
+                                "text": "3. Bias Etkisi",
+                                "description": "1) Basit split'ler tercih edilir\n2) Aşırı karmaşık ağaçlar önlenir\n3) Gain ratio ile düzeltilebilir"
                             }
                         ]
                     },
@@ -143,14 +158,19 @@ const todoData = {
                         "description": "ID3 ve Inductive Learning için hipotez uzayı bias oranı formülasyonu.",
                         "subItems": [
                             {
-                                "id": "id3-formula",
-                                "text": "ID3 Formülasyonu",
-                                "description": "i: girdi sayısı, v: değer sayısı için formülasyon adımları."
+                                "id": "id3-formulation",
+                                "text": "1. ID3 Formülasyonu",
+                                "description": "1) Girdi sayısı (i) etkisi\n2) Değer sayısı (v) etkisi\n3) Sonsuz veri varsayımı"
                             },
                             {
-                                "id": "inductive-formula",
-                                "text": "Inductive Learning Formülasyonu",
-                                "description": "i: girdi sayısı, v: değer sayısı için formülasyon adımları."
+                                "id": "inductive-formulation",
+                                "text": "2. Inductive Learning",
+                                "description": "1) Girdi sayısı (i) etkisi\n2) Değer sayısı (v) etkisi\n3) Eşit değer sayısı varsayımı"
+                            },
+                            {
+                                "id": "comparison",
+                                "text": "3. Karşılaştırma",
+                                "description": "1) Formül farklılıkları\n2) Varsayım etkileri\n3) Bias oranı sonuçları"
                             }
                         ]
                     }
@@ -170,9 +190,14 @@ const todoData = {
                         "description": "İki farklı hata minimizasyon fonksiyonunun kullanım nedenleri.",
                         "subItems": [
                             {
-                                "id": "function-differences",
-                                "text": "Fonksiyon Farklılıkları",
-                                "description": "Her fonksiyonun farklı öğrenme karakteristikleri ve avantajları vardır."
+                                "id": "function-comparison",
+                                "text": "1. Fonksiyon Karşılaştırması",
+                                "description": "1) Her fonksiyonun avantajları\n2) Kullanım amaçları\n3) Performans etkileri"
+                            },
+                            {
+                                "id": "optimization-effects",
+                                "text": "2. Optimizasyon Etkileri",
+                                "description": "1) Gradyan hesaplama farklılıkları\n2) Yakınsama özellikleri\n3) Lokal minimum davranışları"
                             }
                         ]
                     },
@@ -183,8 +208,13 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "momentum-purpose",
-                                "text": "Kullanım Amacı",
-                                "description": "Lokal minimumlardan kaçınma ve öğrenme hızını artırma."
+                                "text": "1. Kullanım Amacı",
+                                "description": "1) Lokal minimumlardan kaçınma\n2) Öğrenme hızını artırma\n3) Salınımları azaltma"
+                            },
+                            {
+                                "id": "implementation",
+                                "text": "2. Uygulama",
+                                "description": "1) Önceki güncellemenin etkisi\n2) Momentum katsayısı seçimi\n3) Gradyan ile ilişkisi"
                             }
                         ]
                     },
@@ -195,8 +225,13 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "penalty-purpose",
-                                "text": "Kullanım Amacı",
-                                "description": "Aşırı öğrenmeyi (overfitting) önleme ve genelleme yeteneğini artırma."
+                                "text": "1. Kullanım Amacı",
+                                "description": "1) Overfitting önleme\n2) Ağırlık büyüklüklerini kontrol\n3) Genelleme yeteneğini artırma"
+                            },
+                            {
+                                "id": "implementation-details",
+                                "text": "2. Uygulama Detayları",
+                                "description": "1) Regularizasyon terimi seçimi\n2) Lambda parametresi etkisi\n3) Hata fonksiyonuna entegrasyon"
                             }
                         ]
                     }
@@ -217,8 +252,13 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "principle-comparison",
-                                "text": "Prensip Karşılaştırması",
-                                "description": "Her iki prensip de basit modelleri tercih eder, ancak MDL bunu bilgi teorisi açısından formüle eder."
+                                "text": "1. Prensip Karşılaştırması",
+                                "description": "1) Occam's Razor: En basit açıklama en iyisidir\n2) MDL: En kısa kodlama en iyisidir\n3) Bilgi teorisi bağlantısı"
+                            },
+                            {
+                                "id": "practical-implications",
+                                "text": "2. Pratik Etkiler",
+                                "description": "1) Model seçimine etkileri\n2) Karmaşıklık ölçümü\n3) Uygulama farklılıkları"
                             }
                         ]
                     },
@@ -229,8 +269,13 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "dimension-effects",
-                                "text": "Boyut Etkileri",
-                                "description": "Boyut arttıkça veri noktaları arasındaki mesafeler anlamsızlaşır ve örnek sayısı yetersiz kalır."
+                                "text": "1. Boyut Etkileri",
+                                "description": "1) Uzaklık ölçümü problemi\n2) Veri seyrekliği\n3) Hesaplama karmaşıklığı"
+                            },
+                            {
+                                "id": "practical-problems",
+                                "text": "2. Pratik Sorunlar",
+                                "description": "1) Örnek sayısı yetersizliği\n2) Mesafe metriği anlamsızlaşması\n3) Komşuluk tanımı zorluğu"
                             }
                         ]
                     }
@@ -251,13 +296,18 @@ const todoData = {
                         "subItems": [
                             {
                                 "id": "conversion-principle",
-                                "text": "Dönüşüm Prensibi",
-                                "description": "Her ağacın binary tree'ye dönüştürülebilme özelliği."
+                                "text": "1. Dönüşüm Prensibi",
+                                "description": "1) Her ağaç binary tree'ye dönüştürülebilir\n2) Dönüşüm yöntemi\n3) Yapısal özellikler"
                             },
                             {
-                                "id": "asymptotic-formula",
-                                "text": "Asimptotik Formül",
-                                "description": "n düğüm için olası binary tree sayısının Catalan sayıları ile ilişkisi."
+                                "id": "counting-formula",
+                                "text": "2. Sayma Formülü",
+                                "description": "1) Catalan sayıları bağlantısı\n2) Recursive formülasyon\n3) Asimptotik büyüme"
+                            },
+                            {
+                                "id": "heuristic-necessity",
+                                "text": "3. Heuristik Gerekliliği",
+                                "description": "1) Brute force imkansızlığı\n2) Arama uzayı büyüklüğü\n3) Hesaplama karmaşıklığı"
                             }
                         ]
                     }
