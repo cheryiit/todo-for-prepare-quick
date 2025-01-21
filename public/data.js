@@ -13,17 +13,17 @@ const todoData = {
                             {
                                 "id": "centroid-calc",
                                 "text": "1. Centroid Hesaplama - O(n)",
-                                "description": "1) Her nokta için x,y koordinatlarını topla\n2) Toplam koordinatları nokta sayısına böl\n3) Karmaşıklık: Her nokta için sabit işlem = O(n)"
+                                "description": "1) Her nokta için x,y koordinatlarını topla<br>2) Toplam koordinatları nokta sayısına böl<br>3) Karmaşıklık: Her nokta için sabit işlem = O(n)"
                             },
                             {
                                 "id": "radius-calc",
                                 "text": "2. Radius Hesaplama - O(n)",
-                                "description": "1) Centroid'i hesapla - O(n)\n2) Her nokta için centroid'e uzaklık hesapla - O(n)\n3) Maximum uzaklığı bul - O(n)\n4) Toplam karmaşıklık: O(n)"
+                                "description": "1) Centroid'i hesapla - O(n)<br>2) Her nokta için centroid'e uzaklık hesapla - O(n)<br>3) Maximum uzaklığı bul - O(n)<br>4) Toplam karmaşıklık: O(n)"
                             },
                             {
                                 "id": "diameter-calc",
                                 "text": "3. Diameter Hesaplama - O(n²)",
-                                "description": "1) Her nokta çifti için uzaklık hesapla - O(n²)\n2) Maximum uzaklığı bul - O(1)\n3) Toplam karmaşıklık: O(n²)"
+                                "description": "1) Her nokta çifti için uzaklık hesapla - O(n²)<br>2) Maximum uzaklığı bul - O(1)<br>3) Toplam karmaşıklık: O(n²)"
                             }
                         ]
                     },
@@ -35,17 +35,17 @@ const todoData = {
                             {
                                 "id": "agglomerative",
                                 "text": "1. Agglomerative Clustering - O(n³)",
-                                "description": "1) Başlangıç mesafe matrisi hesaplama - O(n²)\n2) Her iterasyonda:\n   - En yakın iki cluster'ı bul - O(n²)\n   - Mesafe matrisini güncelle - O(n)\n3) n-1 iterasyon\n4) Toplam karmaşıklık: O(n³)"
+                                "description": "1) Başlangıç mesafe matrisi hesaplama - O(n²)<br>2) Her iterasyonda:<br>&nbsp;&nbsp;&nbsp;- En yakın iki cluster'ı bul - O(n²)<br>&nbsp;&nbsp;&nbsp;- Mesafe matrisini güncelle - O(n)<br>3) n-1 iterasyon<br>4) Toplam karmaşıklık: O(n³)"
                             },
                             {
                                 "id": "kmeans",
                                 "text": "2. K-Means Clustering - O(k*n*t)",
-                                "description": "1) Her iterasyonda:\n   - Her nokta için en yakın centroid'i bul - O(k*n)\n   - Centroid'leri güncelle - O(n)\n2) t iterasyon\n3) Toplam karmaşıklık: O(k*n*t)"
+                                "description": "1) Her iterasyonda:<br>&nbsp;&nbsp;&nbsp;- Her nokta için en yakın centroid'i bul - O(k*n)<br>&nbsp;&nbsp;&nbsp;- Centroid'leri güncelle - O(n)<br>2) t iterasyon<br>3) Toplam karmaşıklık: O(k*n*t)"
                             },
                             {
                                 "id": "kmedoid",
                                 "text": "3. K-Medoid Clustering - O(k*n²*t)",
-                                "description": "1) Her iterasyonda:\n   - Her medoid için tüm noktalarla mesafe hesabı - O(k*n²)\n   - Yeni medoid seçimi - O(n)\n2) t iterasyon\n3) Toplam karmaşıklık: O(k*n²*t)"
+                                "description": "1) Her iterasyonda:<br>&nbsp;&nbsp;&nbsp;- Her medoid için tüm noktalarla mesafe hesabı - O(k*n²)<br>&nbsp;&nbsp;&nbsp;- Yeni medoid seçimi - O(n)<br>2) t iterasyon<br>3) Toplam karmaşıklık: O(k*n²*t)"
                             }
                         ]
                     },
@@ -57,12 +57,12 @@ const todoData = {
                             {
                                 "id": "convex-definition",
                                 "text": "1. Convex/Non-convex Tanımı",
-                                "description": "1) Convex küme: İki nokta arası doğru parçası küme içinde\n2) Non-convex küme: İki nokta arası doğru parçası küme dışına çıkabilir"
+                                "description": "1) Convex küme: İki nokta arası doğru parçası küme içinde<br>2) Non-convex küme: İki nokta arası doğru parçası küme dışına çıkabilir"
                             },
                             {
                                 "id": "kmedoid-capability",
                                 "text": "2. K-Medoid Analizi",
-                                "description": "1) İfade yanlıştır\n2) K-Medoid medoid noktaları kullanarak non-convex kümeleri temsil edebilir\n3) Örnek: U şeklindeki küme birden fazla medoid ile temsil edilebilir"
+                                "description": "1) İfade yanlıştır<br>2) K-Medoid medoid noktaları kullanarak non-convex kümeleri temsil edebilir<br>3) Örnek: U şeklindeki küme birden fazla medoid ile temsil edilebilir"
                             }
                         ]
                     }
@@ -84,17 +84,17 @@ const todoData = {
                             {
                                 "id": "error-minimization",
                                 "text": "1. İfadenin Analizi",
-                                "description": "1) İfade yanlıştır\n2) Delta Rule her zaman global minimuma ulaşamaz\n3) Lokal minimumlara takılabilir"
+                                "description": "1) İfade yanlıştır<br>2) Delta Rule her zaman global minimuma ulaşamaz<br>3) Lokal minimumlara takılabilir"
                             },
                             {
                                 "id": "convergence",
                                 "text": "2. Yakınsama Koşulları",
-                                "description": "1) Lineer ayrılabilir problemlerde yakınsama garantisi var\n2) Lineer ayrılamayan problemlerde yakınsama garantisi yok\n3) Öğrenme oranı seçimi önemli"
+                                "description": "1) Lineer ayrılabilir problemlerde yakınsama garantisi var<br>2) Lineer ayrılamayan problemlerde yakınsama garantisi yok<br>3) Öğrenme oranı seçimi önemli"
                             },
                             {
                                 "id": "limitations",
                                 "text": "3. Kısıtlamalar",
-                                "description": "1) Gradyan iniş tabanlı optimizasyon\n2) Başlangıç ağırlıklarına bağımlılık\n3) Öğrenme oranına hassasiyet"
+                                "description": "1) Gradyan iniş tabanlı optimizasyon<br>2) Başlangıç ağırlıklarına bağımlılık<br>3) Öğrenme oranına hassasiyet"
                             }
                         ]
                     }
@@ -116,17 +116,17 @@ const todoData = {
                             {
                                 "id": "bias-statement",
                                 "text": "1. İfadenin Analizi",
-                                "description": "1) İfade yanlıştır\n2) ID3 information gain'e göre seçim yapar\n3) Küçük ağaç tercihi dolaylı bir sonuçtur"
+                                "description": "1) İfade yanlıştır<br>2) ID3 information gain'e göre seçim yapar<br>3) Küçük ağaç tercihi dolaylı bir sonuçtur"
                             },
                             {
                                 "id": "tree-growth",
                                 "text": "2. Ağaç Büyümesi",
-                                "description": "1) Ağaç büyüdükçe öğrenme performansı artar\n2) Aşırı büyüme overfitting'e neden olur\n3) Durdurma kriterleri önemlidir"
+                                "description": "1) Ağaç büyüdükçe öğrenme performansı artar<br>2) Aşırı büyüme overfitting'e neden olur<br>3) Durdurma kriterleri önemlidir"
                             },
                             {
                                 "id": "performance-balance",
                                 "text": "3. Performans Dengesi",
-                                "description": "1) Öğrenme-genelleme dengesi\n2) Hata ve tesadüfleri öğrenme riski\n3) Information gain hızlı daralması önemli"
+                                "description": "1) Öğrenme-genelleme dengesi<br>2) Hata ve tesadüfleri öğrenme riski<br>3) Information gain hızlı daralması önemli"
                             }
                         ]
                     },
@@ -138,17 +138,17 @@ const todoData = {
                             {
                                 "id": "bias-explanation",
                                 "text": "1. Bias Analizi",
-                                "description": "1) İfade doğrudur\n2) Az değerli özellikler daha yüksek gain üretir\n3) Entropi hesabından kaynaklanan doğal bias"
+                                "description": "1) İfade doğrudur<br>2) Az değerli özellikler daha yüksek gain üretir<br>3) Entropi hesabından kaynaklanan doğal bias"
                             },
                             {
                                 "id": "gain-calculation",
                                 "text": "2. Gain Hesaplama",
-                                "description": "1) Entropi bazlı hesaplama\n2) Değer sayısı arttıkça entropi artar\n3) Gain değeri düşer"
+                                "description": "1) Entropi bazlı hesaplama<br>2) Değer sayısı arttıkça entropi artar<br>3) Gain değeri düşer"
                             },
                             {
                                 "id": "bias-impact",
                                 "text": "3. Bias Etkisi",
-                                "description": "1) Basit split'ler tercih edilir\n2) Aşırı karmaşık ağaçlar önlenir\n3) Gain ratio ile düzeltilebilir"
+                                "description": "1) Basit split'ler tercih edilir<br>2) Aşırı karmaşık ağaçlar önlenir<br>3) Gain ratio ile düzeltilebilir"
                             }
                         ]
                     },
@@ -160,17 +160,17 @@ const todoData = {
                             {
                                 "id": "id3-formulation",
                                 "text": "1. ID3 Formülasyonu",
-                                "description": "1) Girdi sayısı (i) etkisi\n2) Değer sayısı (v) etkisi\n3) Sonsuz veri varsayımı"
+                                "description": "1) Girdi sayısı (i) etkisi<br>2) Değer sayısı (v) etkisi<br>3) Sonsuz veri varsayımı"
                             },
                             {
                                 "id": "inductive-formulation",
                                 "text": "2. Inductive Learning",
-                                "description": "1) Girdi sayısı (i) etkisi\n2) Değer sayısı (v) etkisi\n3) Eşit değer sayısı varsayımı"
+                                "description": "1) Girdi sayısı (i) etkisi<br>2) Değer sayısı (v) etkisi<br>3) Eşit değer sayısı varsayımı"
                             },
                             {
                                 "id": "comparison",
                                 "text": "3. Karşılaştırma",
-                                "description": "1) Formül farklılıkları\n2) Varsayım etkileri\n3) Bias oranı sonuçları"
+                                "description": "1) Formül farklılıkları<br>2) Varsayım etkileri<br>3) Bias oranı sonuçları"
                             }
                         ]
                     }
@@ -192,12 +192,12 @@ const todoData = {
                             {
                                 "id": "function-comparison",
                                 "text": "1. Fonksiyon Karşılaştırması",
-                                "description": "1) Her fonksiyonun avantajları\n2) Kullanım amaçları\n3) Performans etkileri"
+                                "description": "1) Her fonksiyonun avantajları<br>2) Kullanım amaçları<br>3) Performans etkileri"
                             },
                             {
                                 "id": "optimization-effects",
                                 "text": "2. Optimizasyon Etkileri",
-                                "description": "1) Gradyan hesaplama farklılıkları\n2) Yakınsama özellikleri\n3) Lokal minimum davranışları"
+                                "description": "1) Gradyan hesaplama farklılıkları<br>2) Yakınsama özellikleri<br>3) Lokal minimum davranışları"
                             }
                         ]
                     },
@@ -209,12 +209,12 @@ const todoData = {
                             {
                                 "id": "momentum-purpose",
                                 "text": "1. Kullanım Amacı",
-                                "description": "1) Lokal minimumlardan kaçınma\n2) Öğrenme hızını artırma\n3) Salınımları azaltma"
+                                "description": "1) Lokal minimumlardan kaçınma<br>2) Öğrenme hızını artırma<br>3) Salınımları azaltma"
                             },
                             {
                                 "id": "implementation",
                                 "text": "2. Uygulama",
-                                "description": "1) Önceki güncellemenin etkisi\n2) Momentum katsayısı seçimi\n3) Gradyan ile ilişkisi"
+                                "description": "1) Önceki güncellemenin etkisi<br>2) Momentum katsayısı seçimi<br>3) Gradyan ile ilişkisi"
                             }
                         ]
                     },
@@ -226,12 +226,12 @@ const todoData = {
                             {
                                 "id": "penalty-purpose",
                                 "text": "1. Kullanım Amacı",
-                                "description": "1) Overfitting önleme\n2) Ağırlık büyüklüklerini kontrol\n3) Genelleme yeteneğini artırma"
+                                "description": "1) Overfitting önleme<br>2) Ağırlık büyüklüklerini kontrol<br>3) Genelleme yeteneğini artırma"
                             },
                             {
                                 "id": "implementation-details",
                                 "text": "2. Uygulama Detayları",
-                                "description": "1) Regularizasyon terimi seçimi\n2) Lambda parametresi etkisi\n3) Hata fonksiyonuna entegrasyon"
+                                "description": "1) Regularizasyon terimi seçimi<br>2) Lambda parametresi etkisi<br>3) Hata fonksiyonuna entegrasyon"
                             }
                         ]
                     }
@@ -253,12 +253,12 @@ const todoData = {
                             {
                                 "id": "principle-comparison",
                                 "text": "1. Prensip Karşılaştırması",
-                                "description": "1) Occam's Razor: En basit açıklama en iyisidir\n2) MDL: En kısa kodlama en iyisidir\n3) Bilgi teorisi bağlantısı"
+                                "description": "1) Occam's Razor: En basit açıklama en iyisidir<br>2) MDL: En kısa kodlama en iyisidir<br>3) Bilgi teorisi bağlantısı"
                             },
                             {
                                 "id": "practical-implications",
                                 "text": "2. Pratik Etkiler",
-                                "description": "1) Model seçimine etkileri\n2) Karmaşıklık ölçümü\n3) Uygulama farklılıkları"
+                                "description": "1) Model seçimine etkileri<br>2) Karmaşıklık ölçümü<br>3) Uygulama farklılıkları"
                             }
                         ]
                     },
@@ -270,12 +270,12 @@ const todoData = {
                             {
                                 "id": "dimension-effects",
                                 "text": "1. Boyut Etkileri",
-                                "description": "1) Uzaklık ölçümü problemi\n2) Veri seyrekliği\n3) Hesaplama karmaşıklığı"
+                                "description": "1) Uzaklık ölçümü problemi<br>2) Veri seyrekliği<br>3) Hesaplama karmaşıklığı"
                             },
                             {
                                 "id": "practical-problems",
                                 "text": "2. Pratik Sorunlar",
-                                "description": "1) Örnek sayısı yetersizliği\n2) Mesafe metriği anlamsızlaşması\n3) Komşuluk tanımı zorluğu"
+                                "description": "1) Örnek sayısı yetersizliği<br>2) Mesafe metriği anlamsızlaşması<br>3) Komşuluk tanımı zorluğu"
                             }
                         ]
                     }
@@ -297,17 +297,17 @@ const todoData = {
                             {
                                 "id": "conversion-principle",
                                 "text": "1. Dönüşüm Prensibi",
-                                "description": "1) Her ağaç binary tree'ye dönüştürülebilir\n2) Dönüşüm yöntemi\n3) Yapısal özellikler"
+                                "description": "1) Her ağaç binary tree'ye dönüştürülebilir<br>2) Dönüşüm yöntemi<br>3) Yapısal özellikler"
                             },
                             {
                                 "id": "counting-formula",
                                 "text": "2. Sayma Formülü",
-                                "description": "1) Catalan sayıları bağlantısı\n2) Recursive formülasyon\n3) Asimptotik büyüme"
+                                "description": "1) Catalan sayıları bağlantısı<br>2) Recursive formülasyon<br>3) Asimptotik büyüme"
                             },
                             {
                                 "id": "heuristic-necessity",
                                 "text": "3. Heuristik Gerekliliği",
-                                "description": "1) Brute force imkansızlığı\n2) Arama uzayı büyüklüğü\n3) Hesaplama karmaşıklığı"
+                                "description": "1) Brute force imkansızlığı<br>2) Arama uzayı büyüklüğü<br>3) Hesaplama karmaşıklığı"
                             }
                         ]
                     }
