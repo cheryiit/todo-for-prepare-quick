@@ -1,0 +1,80 @@
+// Example template for data.js
+// This file shows the structure of how to organize your study/interview topics
+// Copy this file to data.js and customize with your own content
+
+const todoData = {
+  "your_main_topic": {
+    "title": "Your Main Topic Title (e.g. Interview Preparation)",
+    "sections": {
+      "section_1": {
+        "title": "Section 1 Title (e.g. Fundamentals)",
+        "items": [
+          {
+            "id": "unique-id-1",
+            "text": "Topic Name",
+            "description": "Detailed explanation of this topic.",
+            "subItems": [
+              {
+                "id": "sub-unique-id-1", 
+                "text": "Subtopic Name", 
+                "description": "Explanation of this subtopic. You can use technical terms in English while explaining in any language."
+              },
+              {
+                "id": "sub-unique-id-2", 
+                "text": "Another Subtopic", 
+                "description": "Another explanation here. Be as detailed as needed."
+              }
+            ]
+          },
+          {
+            "id": "unique-id-2",
+            "text": "Another Topic",
+            "description": "You can add as many topics as needed.",
+            "subItems": [
+              // Add subtopics as needed
+            ]
+          }
+        ]
+      },
+      "section_2": {
+        "title": "Section 2 Title (e.g. Advanced Concepts)",
+        "items": [
+          {
+            "id": "unique-id-3",
+            "text": "Topic in Section 2",
+            "description": "Topics are organized by sections.",
+            "subItems": [
+              {
+                "id": "sub-unique-id-3", 
+                "text": "Nested Subtopic", 
+                "description": "You can also nest subtopics deeper if needed.",
+                "subItems": [
+                  {
+                    "id": "nested-sub-id-1",
+                    "text": "Nested Sub-subtopic",
+                    "description": "This is an example of a deeper nesting level."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+      // Add more sections as needed
+    }
+  }
+  // You can have multiple main topics by adding more objects here
+};
+
+/* 
+Structure explained:
+- Main Topic: The highest level category (e.g., "Interview Preparation")
+- Sections: Logical groupings within the main topic (e.g., "Fundamentals", "Advanced")
+- Items: Individual topics within a section
+- SubItems: Subtopics nested under an item
+- Each element has:
+  - id: A unique identifier (used internally)
+  - text: The display name/title
+  - description: Detailed explanation
+  - subItems: Optional array of nested items
+*/

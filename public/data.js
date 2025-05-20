@@ -8,86 +8,111 @@ const todoData = {
           {
             "id": "java-basics",
             "text": "Java Dilinin Temelleri",
-            "description": "Java programlama dilinin temel yapı taşları ve özellikleri.",
+            "description": "Java programlama dilinin temel yapı taşları, sözdizimi ve özellikleri. Java'nın platform bağımsızlığı (write once, run anywhere) ve JVM mimarisi.",
             "subItems": [
               {
                 "id": "data-types", 
                 "text": "Veri Tipleri", 
-                "description": "Primitive ve Referans tipleri, farkları ve memory yönetimi."
+                "description": "Primitive veri tipleri (byte, short, int, long, float, double, boolean, char) ve Referans tipleri (String, Arrays, Classes, Interfaces). Primitive ve referans tipleri arasındaki farklar, bellekte nasıl saklandıkları ve memory yönetimi özellikleri."
+              },
+              {
+                "id": "type-casting", 
+                "text": "Type Casting", 
+                "description": "Implicit (otomatik) ve Explicit (manuel) tür dönüşümleri. Primitive tipler arasında, referans tipleri arasında ve aralarındaki dönüşüm kuralları."
               },
               {
                 "id": "operators-control-flow", 
                 "text": "Operatörler ve Kontrol Akış Mekanizmaları", 
-                "description": "if/else, switch, döngüler ve operatörlerin kullanımı."
+                "description": "Aritmetik, ilişkisel, mantıksal ve bitwise operatörler. if/else, switch, ternary operatör kullanımı. for, while, do-while döngüleri ve break, continue, return ifadeleri ile akış kontrolü."
               },
               {
                 "id": "arrays-strings", 
                 "text": "Diziler ve String Sınıfı", 
-                "description": "Array kullanımı, String'in Immutability özelliği, StringBuilder vs StringBuffer."
+                "description": "Tek ve çok boyutlu Array tanımlama, başlatma ve erişim. String'in Immutability özelliği ve neden değiştirilemez olduğu. String işlemleri için StringBuilder ve StringBuffer sınıflarının kullanımı ve performans farkları."
               },
               {
                 "id": "methods", 
                 "text": "Metotlar", 
-                "description": "Method Overloading vs Method Overriding arasındaki farklar."
+                "description": "Method tanımlama, parametre geçişi (pass by value vs. pass by reference), method overloading (aşırı yükleme) ve method overriding (geçersiz kılma) kavramları arasındaki farklar. Statik ve statik olmayan metotlar."
+              },
+              {
+                "id": "garbage-collection", 
+                "text": "Garbage Collection", 
+                "description": "JVM'in otomatik bellek yönetimi, garbage collector'ın çalışma prensibi, unreachable nesnelerin belirlenmesi ve temizlenmesi."
               }
             ]
           },
           {
             "id": "oop-principles",
             "text": "Nesne Yönelimli Programlama (OOP) Prensipleri",
-            "description": "Java'nın temelini oluşturan OOP prensipleri ve uygulamaları.",
+            "description": "Java'nın temelini oluşturan OOP prensipleri, sınıf tasarımı ve nesne tabanlı düşünme yaklaşımı. Java'nın 'Her şey bir nesnedir' (neredeyse) felsefesi.",
             "subItems": [
+              {
+                "id": "classes-objects", 
+                "text": "Sınıflar ve Nesneler", 
+                "description": "Sınıf tanımlama, constructor (yapıcı metot) kullanımı, this keyword, instance ve class değişkenleri, metotlar, erişim belirleyiciler. Nesne oluşturma, başlatma ve kullanma."
+              },
               {
                 "id": "encapsulation", 
                 "text": "Encapsulation (Kapsülleme)", 
-                "description": "Veri ve davranışın bir sınıf içinde sarmalanması. Erişim belirleyiciler (public, private, protected, default) ve Getter/Setter metotları."
+                "description": "Veri ve davranışın bir sınıf içinde sarmalanması, doğrudan erişimin kısıtlanması. Erişim belirleyiciler (public, private, protected, default) ve bunların görünürlük alanları. Getter/Setter metotları ile kontrollü erişim sağlama."
               },
               {
                 "id": "inheritance", 
                 "text": "Inheritance (Kalıtım)", 
-                "description": "Bir sınıfın başka bir sınıftan özelliklerini miras alması. extends anahtar kelimesi, super kullanımı ve 'IS-A' ilişkisi."
+                "description": "Bir sınıfın başka bir sınıftan özelliklerini miras alması, kodun yeniden kullanılabilirliği. extends anahtar kelimesi, super kullanımı, 'IS-A' ilişkisi ve kalıtım hiyerarşisi. Final sınıflar ve neden kalıtılamayacağı."
               },
               {
                 "id": "polymorphism", 
                 "text": "Polymorphism (Çok Biçimlilik)", 
-                "description": "Bir nesnenin farklı şekillerde davranabilme yeteneği. Statik ve Dinamik Polymorphism, instanceof operatörü, Upcasting/Downcasting."
+                "description": "Bir nesnenin farklı şekillerde davranabilme yeteneği. Statik (compile-time) ve Dinamik (run-time) Polymorphism. Method overloading ve overriding ile gerçekleştirme. instanceof operatörü, Upcasting/Downcasting ve Type Safety."
               },
               {
                 "id": "abstraction", 
                 "text": "Abstraction (Soyutlama)", 
-                "description": "Karmaşıklığı yönetme mekanizması. abstract sınıflar/metotlar ve interface'ler."
+                "description": "Karmaşıklığı yönetme mekanizması, detayların gizlenmesi ve önemli özelliklerin öne çıkarılması. abstract sınıflar/metotlar ve bunların kullanım amaçları. Interface'ler ve abstract class'lar arasındaki farklar ve ne zaman hangisinin tercih edileceği."
+              },
+              {
+                "id": "coupling-cohesion", 
+                "text": "Coupling ve Cohesion", 
+                "description": "Loose coupling (gevşek bağlantı) ve high cohesion (yüksek uyum) prensiplerinin önemi. Sınıflar arası bağımlılıkları azaltmanın yolları ve iyi tasarlanmış OOP sistemlerinin özellikleri."
               }
             ]
           },
           {
             "id": "java-concepts",
             "text": "Java'da Önemli Kavramlar ve Sınıflar",
-            "description": "Java'da sıkça kullanılan kavramlar, anahtar kelimeler ve sınıflar.",
+            "description": "Java'da sıkça kullanılan kavramlar, anahtar kelimeler ve temel sınıflar. Güçlü tip kontrolü ve çalışma zamanı özellikleri.",
             "subItems": [
               {
                 "id": "final-keyword", 
                 "text": "final Anahtar Kelimesi", 
-                "description": "final değişkenler, metotlar ve sınıflar. Kullanım amaçları ve etkileri."
+                "description": "final değişkenler (sabitler), final metotlar (override edilemez), final sınıflar (extend edilemez). Kullanım amaçları, immutability sağlama ve güvenlik etkileri. final referanslar ve içeriklerinin değiştirilebilirliği arasındaki fark."
               },
               {
                 "id": "static-keyword", 
                 "text": "static Anahtar Kelimesi", 
-                "description": "static değişkenler, metotlar, bloklar ve nested sınıflar. Kullanım senaryoları."
+                "description": "static değişkenler (sınıf değişkenleri), static metotlar (sınıf metotları), static bloklar (sınıf başlatma) ve nested static sınıflar. Nesnelerden bağımsız olan ve sınıfa ait özelliklerin tanımlanması. static import ve utility sınıfları."
+              },
+              {
+                "id": "object-class", 
+                "text": "Object Sınıfı ve Metotları", 
+                "description": "Java'da tüm sınıfların atası olan Object sınıfı. equals(), hashCode(), toString(), clone(), finalize(), getClass() metotları ve uygun şekilde override edilmesi. equals() ve hashCode() kontratı."
               },
               {
                 "id": "exception-handling", 
                 "text": "Exception Handling (İstisna Yönetimi)", 
-                "description": "try-catch-finally blokları, throw vs throws, Checked vs Unchecked Exceptions, özel Exception sınıfları."
+                "description": "try-catch-finally blokları, try-with-resources yapısı, throw ve throws anahtar kelimeleri. Checked vs Unchecked Exceptions arasındaki farklar ve ne zaman hangisini kullanmak gerektiği. Custom Exception sınıfları oluşturma ve exception hiyerarşisini tasarlama."
               },
               {
                 "id": "collections-framework", 
                 "text": "Java Collections Framework (JCF)", 
-                "description": "List (ArrayList, LinkedList), Set (HashSet, TreeSet), Map (HashMap, TreeMap), Queue yapıları ve kullanım senaryoları.",
+                "description": "Veri yapılarını standart bir şekilde yönetmeyi sağlayan Collections Framework mimarisi. List, Set, Queue, Map arayüzleri ve gerçekleştirimleri. Collections utility sınıfı ve sık kullanılan metotları.",
                 "subItems": [
-                  {"id": "list", "text": "List: ArrayList, LinkedList", "description": "Sıralı koleksiyonlar için kullanılan yapılar."},
-                  {"id": "set", "text": "Set: HashSet, LinkedHashSet, TreeSet", "description": "Benzersiz eleman tutan koleksiyonlar. hashCode() ve equals() metotlarının önemi."},
-                  {"id": "map", "text": "Map: HashMap, LinkedHashMap, TreeMap", "description": "Anahtar-değer çiftleri tutan koleksiyonlar."},
-                  {"id": "queue", "text": "Queue: LinkedList, PriorityQueue, Deque", "description": "Kuyruk veri yapıları ve uygulamaları."}
+                  {"id": "list", "text": "List: ArrayList, LinkedList", "description": "Sıralı koleksiyonlar için kullanılan yapılar. ArrayList (dinamik dizi, rastgele erişim) ve LinkedList (bağlı liste, ekle/çıkar operasyonları) arasındaki performans farklılıkları."},
+                  {"id": "set", "text": "Set: HashSet, LinkedHashSet, TreeSet", "description": "Benzersiz eleman tutan koleksiyonlar. HashCode tabanlı unique kontrolü. hashCode() ve equals() metotlarının doğru implementasyonunun önemi. Hash tabanlı, bağlantılı ve ağaç tabanlı implementasyonların farkları."},
+                  {"id": "map", "text": "Map: HashMap, LinkedHashMap, TreeMap", "description": "Anahtar-değer çiftleri tutan koleksiyonlar. Anahtarların benzersiz olması gerekliliği ve Map implementasyonları arasındaki farklar. ConcurrentHashMap gibi thread-safe alternatiflerin varlığı."},
+                  {"id": "queue", "text": "Queue: LinkedList, PriorityQueue, Deque", "description": "Kuyruk veri yapıları ve FIFO (First In First Out), LIFO (Last In First Out) prensiplerine göre işlem yapan koleksiyonlar. LinkedList ve ArrayDeque performans özellikleri."}
                 ]
               }
             ]
@@ -95,54 +120,69 @@ const todoData = {
           {
             "id": "java8-features",
             "text": "Java 8+ Özellikleri",
-            "description": "Java 8 ve sonrasında gelen önemli yenilikler ve özellikler.",
+            "description": "Java 8 ve sonrasında gelen önemli yenilikler ve fonksiyonel programlama özellikleri. Yazılım geliştirme paradigmalarının genişlemesi ve modern Java kodlama teknikleri.",
             "subItems": [
+              {
+                "id": "functional-interfaces", 
+                "text": "Functional Interfaces", 
+                "description": "Tek bir abstract metot içeren ve @FunctionalInterface anotasyonu ile işaretlenebilen arayüzler. Predicate<T>, Consumer<T>, Function<T,R>, Supplier<T> gibi dahili fonksiyonel arayüzler ve kullanım alanları."
+              },
               {
                 "id": "lambda-expressions", 
                 "text": "Lambda Expressions", 
-                "description": "Fonksiyonel arayüzlerin (@FunctionalInterface) kısa yazımı ve kullanımı."
+                "description": "Kısa, anonim fonksiyonları tanımlamaya yarayan sözdizimi. Parametre listesi, ok operatörü (->) ve gövdeden oluşan yapı. Daha az ve daha okunabilir kod yazmanın yolu. Lambda vs Anonymous Inner Class farkları."
+              },
+              {
+                "id": "method-references", 
+                "text": "Method References", 
+                "description": "Var olan metotları lambda yerine kullanma yöntemi. StaticMethod::methodName, object::instanceMethod, Class::instanceMethod, Class::new gibi farklı formlar ve kullanım alanları."
               },
               {
                 "id": "stream-api", 
                 "text": "Stream API", 
-                "description": "Koleksiyonlar üzerinde işlemler için kullanılan API (filter, map, flatMap, reduce, collect, sorted, forEach)."
+                "description": "Koleksiyonlar üzerinde fonksiyonel-style işlemler için kullanılan güçlü API. filter, map, flatMap, reduce, collect, sorted, forEach gibi metotlar ve stream pipeline oluşturma. Paralel stream ile çoklu işlemci kullanımı."
               },
               {
                 "id": "optional", 
                 "text": "Optional Sınıfı", 
-                "description": "NullPointerException hatalarından kaçınma ve null kontrollerini basitleştirme."
+                "description": "NullPointerException hatalarından kaçınma ve null kontrollerini daha zarif bir şekilde yapma amacıyla tasarlanmış konteyner sınıfı. orElse, orElseGet, orElseThrow, ifPresent gibi metotlar ve fluent API tasarımı."
               },
               {
                 "id": "date-time-api", 
                 "text": "Yeni Tarih/Zaman API'si", 
-                "description": "LocalDate, LocalTime, LocalDateTime, Instant, Duration, Period sınıfları."
+                "description": "LocalDate, LocalTime, LocalDateTime, Instant, Duration, Period sınıfları ile daha tutarlı ve Thread-safe tarih/zaman işlemleri. Immutable yapılar ve DateTimeFormatter ile biçimlendirme."
               },
               {
                 "id": "interface-methods", 
                 "text": "Interface'lerde default ve static metotlar", 
-                "description": "Interface'lere uygulama ekleyebilme yeteneği."
+                "description": "Interface'lere uygulama ekleyebilme yeteneği ve geriye dönük uyumluluk sağlama. Interface evrimini kolaylaştırma ve utility metotları gruplandırma."
               }
             ]
           },
           {
             "id": "annotations",
             "text": "Java'da Anotasyonlar (Annotations)",
-            "description": "Java'da metadata tanımlamaya yarayan anotasyonlar ve kullanımları.",
+            "description": "Java'da metadata tanımlamaya yarayan ve derleme zamanında veya çalışma zamanında işlenebilen özel işaretleyiciler. Reflection API ile birlikte çalışarak güçlü özellikler sağlar.",
             "subItems": [
               {
                 "id": "annotation-basics", 
                 "text": "Anotasyon Nedir?", 
-                "description": "Anotasyonların amacı, çalışma zamanında veya derleme zamanında kullanılabilecek üst veriler."
+                "description": "Anotasyonların amacı, kod üzerinde ekstra bilgi sağlamak ve bu bilgilerin derleme zamanında veya çalışma zamanında işlenmesini mümkün kılmak. Deklaratif programlama ve konfigürasyon kolaylığı."
               },
               {
                 "id": "standard-annotations", 
                 "text": "Standart Anotasyonlar", 
-                "description": "@Override, @Deprecated, @SuppressWarnings, @FunctionalInterface ve kullanım amaçları."
+                "description": "@Override (metot geçersiz kılma kontrolü), @Deprecated (kullanımdan kaldırma uyarısı), @SuppressWarnings (belirli uyarıları bastırma), @FunctionalInterface (fonksiyonel arayüz kontrolü) ve bunların kullanım amaçları."
               },
               {
                 "id": "meta-annotations", 
                 "text": "Meta-Anotasyonlar", 
-                "description": "@Target, @Retention, @Documented, @Inherited ve özel anotasyon oluşturma."
+                "description": "Anotasyonları tanımlamak için kullanılan anotasyonlar. @Target (nerelerde kullanılabileceği), @Retention (bilginin ne kadar süre tutulacağı), @Documented (JavaDoc'a dahil edilme), @Inherited (alt sınıflara aktarılma) ve özel anotasyon oluşturma."
+              },
+              {
+                "id": "custom-annotations", 
+                "text": "Özel Anotasyon Oluşturma", 
+                "description": "Kendi anotasyonlarınızı tanımlama, elementler ekleme ve varsayılan değerler belirleme. Reflection API kullanarak anotasyonları çalışma zamanında okuma ve işleme koyma teknikleri."
               }
             ]
           }
@@ -520,28 +560,6 @@ const todoData = {
                 "id": "framework-comparison-2", 
                 "text": "Django ve .NET ile Spring Boot Karşılaştırması", 
                 "description": "Her bir framework'ün güçlü ve zayıf yönleri, kullanım senaryoları."
-              }
-            ]
-          },
-          {
-            "id": "etsy-experience",
-            "text": "Etsy E-Ticaret Deneyimi",
-            "description": "E-ticaret ve AI model geliştirme deneyimleriyle ilgili sorulara hazırlık.",
-            "subItems": [
-              {
-                "id": "ai-models", 
-                "text": "Özel AI Modelleri Geliştirme", 
-                "description": "Veri setleri, model seçimi, eğitim süreci, performans ölçümü ve iyileştirme yöntemleri."
-              },
-              {
-                "id": "ecommerce-ops", 
-                "text": "E-Ticaret Operasyonları", 
-                "description": "SEO, dijital pazarlama, analitik araçlar ve metrikler."
-              },
-              {
-                "id": "product-dev", 
-                "text": "Ürün Geliştirme Yaşam Döngüsü", 
-                "description": "Fikirden ürüne, müşteri geri bildirimlerini ürüne yansıtma deneyimleri."
               }
             ]
           },
