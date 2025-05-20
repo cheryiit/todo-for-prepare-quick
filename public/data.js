@@ -1,496 +1,603 @@
 const todoData = {
-    "network_fundamentals": {
-      "title": "Network Temelleri ve Tarihçesi",
-      "sections": {
-        "introduction": {
-          "title": "Giriş ve Temel Kavramlar",
-          "items": [
-            {
-              "id": "network-purpose",
-              "text": "Network'ün Amacı",
-              "description": "İki bilgisayarın ortak bir dil (protokol) aracılığıyla haberleşmesini sağlamak.",
-            },
-            {
-              "id": "old-protocols",
-              "text": "Eski Protokoller",
-              "description": "DECNET, AppleTalk, IPX/SPX, Banyan VINES gibi eski ve artık yaygın olarak kullanılmayan protokoller.",
-              "subItems": [
-                {"id": "decnet", "text": "DECNET"},
-                {"id": "appletalk", "text": "AppleTalk"},
-                {"id": "ipx-spx", "text": "IPX/SPX"},
-                {"id": "banyan-vines", "text": "Banyan VINES"}
-              ]
-            },
-            {
-              "id": "current-protocol",
-              "text": "Günümüzdeki Hakim Protokol",
-              "description": "TCP/IP (Transmission Control Protocol/Internet Protocol)",
-            },
-            {
-              "id": "circuit-vs-packet",
-              "text": "Devre Anahtarlamalı (Circuit Switching) vs. Paket Anahtarlamalı (Packet Switching)",
-              "description": "İki temel iletişim yöntemi. Devre anahtarlamada, iletişim için özel bir yol kurulurken, paket anahtarlamada veri küçük paketlere bölünerek farklı yollardan gönderilir.",
-              "subItems": [
-                {
-                  "id": "circuit-switching",
-                  "text": "Devre Anahtarlamalı İletişim",
-                  "description": "İletişim başlamadan önce, kaynak ve hedef arasında fiziksel bir devre kurulur. Bu devre, iletişim süresince ayrılmış olarak kalır. (Örn: Geleneksel telefon ağları)"
-                },
-                {
-                  "id": "packet-switching",
-                  "text": "Paket Anahtarlamalı İletişim",
-                  "description": "Veri, 'paket' adı verilen küçük parçalara bölünür. Her paket, başlık bilgisi (hedef adresi vb.) içerir ve ağ üzerinde birbirinden bağımsız olarak yönlendirilir. (Örn: İnternet)"
-                }
-              ]
-            }
-          ]
-        },
-        "arpanet": {
-          "title": "ARPANET (İnternetin Kökeni)",
-          "items": [
-            {
-              "id": "arpanet-origin",
-              "text": "ARPANET'in Kuruluşu",
-              "description": "ABD Savunma Bakanlığı'nın (DoD) veri iletişimi ihtiyacını karşılamak için tasarlandı.",
-            },
-            {
-              "id": "arpa-role",
-              "text": "ARPA'nın Rolü",
-              "description": "Advanced Research Projects Agency (ARPA), üniversitelerle veri alışverişi için üreticiden bağımsız bir protokol geliştirmeye başladı.",
-            },
-            {
-              "id": "arpanet-first-packet-switched",
-              "text": "İlk Paket Anahtarlamalı Ağ",
-              "description": "ARPANET, internet tarihindeki ilk paket anahtarlamalı ağdır.",
-            },
-            {
-              "id": "arpanet-growth",
-              "text": "ARPANET'in Büyümesi",
-              "description": "Mart 1970'te 1 düğüm (node) ile başladı, Eylül 1971'de 18 düğüm, Temmuz 1975'te İngiltere ve Norveç bağlantıları dahil 57 düğüm.",
-            }
-          ]
-        },
-        "osi_tcpip": {
-          "title": "OSI ve TCP/IP Modelleri",
-          "items": [
-            {
-              "id": "osi-model",
-              "text": "OSI Modeli (Open Systems Interconnection)",
-              "description": "ISO (International Organization for Standardization) tarafından geliştirilen, farklı bilgisayar sistemlerinin bir ağ üzerinden nasıl iletişim kuracağını açıklayan bir referans modeli.",
-              "subItems":[
-                  {
-                    "id": "osi-layers",
-                    "text":"OSI Katmanları",
-                    "description":"Fiziksel, Veri Bağlantısı, Ağ, Taşıma, Oturum, Sunum, Uygulama",
-                    "subItems":[
-                      {"id":"osi-physical", "text":"Fiziksel Katman (Physical)"},
-                      {"id":"osi-data-link", "text":"Veri Bağlantısı Katmanı (Data Link)"},
-                      {"id":"osi-network", "text":"Ağ Katmanı (Network)"},
-                      {"id":"osi-transport", "text":"Taşıma Katmanı (Transport)"},
-                      {"id":"osi-session", "text":"Oturum Katmanı (Session)"},
-                      {"id":"osi-presentation", "text":"Sunum Katmanı (Presentation)"},
-                      {"id":"osi-application", "text":"Uygulama Katmanı (Application)"},
-  
-                    ]
-                  }
-  
-              ]
-            },
-            {
-              "id": "tcpip-model",
-              "text": "TCP/IP Modeli",
-              "description": "İnternetin temelini oluşturan protokol takımı. OSI modeline göre daha basit ve pratiktir.",
-              "subItems":[
-                {
-                  "id":"tcpip-layers",
-                  "text":"TCP/IP Katmanları",
-                  "description":"Uygulama, Taşıma, İnternet, Ağ Arayüzü",
-                  "subItems":[
-                    {"id":"tcpip-application", "text":"Uygulama Katmanı (Application)"},
-                    {"id":"tcpip-transport", "text":"Taşıma Katmanı (Transport)"},
-                    {"id":"tcpip-internet", "text":"İnternet Katmanı (Internet)"},
-                    {"id":"tcpip-network-access", "text":"Ağ Erişim Katmanı (Network Access)"}
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "tcpip-protocol-suite",
-              "text": "TCP/IP Protokol Takımı",
-              "description": "HTTP, SMTP, Telnet, FTP, DNS, RIP, SNMP gibi protokolleri içeren bir bütün.",
-               "subItems":[
-                      {"id":"tcpip-http", "text":"HTTP"},
-                      {"id":"tcpip-smtp", "text":"SMTP"},
-                      {"id":"tcpip-telnet", "text":"Telnet"},
-                      {"id":"tcpip-ftp", "text":"FTP"},
-                      {"id":"tcpip-dns", "text":"DNS"},
-                      {"id":"tcpip-rip", "text":"RIP"},
-                      {"id":"tcpip-snmp", "text":"SNMP"},
-                      {"id":"tcpip-udp", "text":"UDP"},
-                      {"id":"tcpip-tcp", "text":"TCP"},
-                      {"id":"tcpip-arp", "text":"ARP"},
-                      {"id":"tcpip-ip", "text":"IP"},
-                      {"id":"tcpip-igmp", "text":"IGMP"},
-                      {"id":"tcpip-icmp", "text":"ICMP"},
-                      {"id":"tcpip-ethernet", "text":"Ethernet"},
-                      {"id":"tcpip-token-ring", "text":"Token Ring"},
-                      {"id":"tcpip-atm", "text":"ATM"},
-                      {"id":"tcpip-frame-relay", "text":"Frame Relay"},
-  
-               ]
-            }
-          ]
-        },
-         "encapsulation_decapsulation": {
-          "title": "Encapsulation (Kapsülleme) ve Decapsulation (Kapsülden Çıkarma)",
-          "items": [
-            {
-              "id": "encapsulation-process",
-              "text": "Kapsülleme İşlemi",
-              "description": "Verinin, her katmanda başlık (header) ve bazen kuyruk (trailer) bilgileri eklenerek bir alt katmana iletilmesi.",
-            },
-            {
-              "id": "decapsulation-process",
-              "text": "Kapsülden Çıkarma İşlemi",
-              "description": "Alıcı tarafta, her katmanda başlık ve kuyruk bilgilerinin kaldırılarak verinin bir üst katmana iletilmesi.",
-            },
-            {
-              "id":"encapsulation-example",
-              "text":"Kapsülleme Örneği",
-              "description":"Verinin Uygulama katmanından başlayıp Fiziksel katman kadar sırayla, Data, Segment, Packet, Frame, Bits olarak kapsüllenmesi."
-            },
-            {
-              "id":"decapsulation-example",
-              "text":"Dekapsülleme Örneği",
-              "description":"Bits olarak alınan verinin Fiziksel katman'dan Uygulama katmanına kadar Frame, Packet, Segment ve Data olarak verinin ayıklanması."
-            }
-          ]
-        },
-        "layer1":{
-          "title":"Fiziksel Katman (Layer 1)",
-          "items":[
-            {
-              "id":"physical-layer-intro",
-              "text":"Fiziksel Katman Hakkında",
-              "description":"Bu katman, verinin fiziksel ortam üzerinden (kablo, fiber optik, kablosuz sinyaller) nasıl iletileceğini tanımlar. Bit'lerin (0 ve 1'ler) voltaj seviyeleri, sinyal zamanlaması gibi konular bu katmanda ele alınır."
-            },
-            {
-              "id":"twisted-pair",
-              "text":"Twisted Pair (Bükümlü Çift) Kablolar",
-              "description":"En yaygın kullanılan kablo türlerinden biridir.  Birbirine bükülmüş tel çiftlerinden oluşur. Bükülme, elektromanyetik girişimi azaltmaya yardımcı olur.",
-              "subItems":[
-                {
-                  "id":"utp",
-                  "text":"UTP (Unshielded Twisted Pair)",
-                  "description":"Korumasız bükümlü çift. Daha ucuz, daha esnek, ancak gürültüye daha duyarlı."
-                },
-                 {
-                  "id":"stp",
-                  "text":"STP (Shielded Twisted Pair)",
-                  "description":"Korumalı bükümlü çift. Daha pahalı, daha az esnek, ancak gürültüye karşı daha dayanıklı."
-                }
-  
-              ]
-            },
-            {
-              "id":"fiber-optic",
-              "text":"Fiber Optik Kablolar",
-              "description":"Veriyi ışık sinyalleriyle ileten kablolardır. Çok yüksek bant genişliği ve uzun mesafe iletimi sağlar. Elektromanyetik girişimden etkilenmezler.",
-               "subItems":[
-                {
-                  "id":"fiber-components",
-                  "text":"Fiber Optik Kablo Bileşenleri",
-                  "description":"Çekirdek (Core), Kaplama (Cladding), Koruyucu Kaplama (Coating), Güçlendirici Eleman (Strength Member), Dış Kılıf (Outer Jacket)."
-                }
-               ]
-            }
-  
-          ]
-        },
-         "layer2":{
-          "title":"Veri Bağlantı Katmanı (Layer 2)",
-          "items":[
+  "java_spring_interview": {
+    "title": "Garanti BBVA Mülakat Hazırlığı: Java Spring",
+    "sections": {
+      "day1_morning": {
+        "title": "Temel Java Bilgisi ve OOP Kavramları (1. Gün Sabah)",
+        "items": [
+          {
+            "id": "java-basics",
+            "text": "Java Dilinin Temelleri",
+            "description": "Java programlama dilinin temel yapı taşları ve özellikleri.",
+            "subItems": [
               {
-                "id":"data-link-functions",
-                "text":"Veri Bağlantı Katmanı Görevleri",
-                "description":"Fiziksel katmandan gelen bit akışını 'frame' (çerçeve) adı verilen mantıksal birimlere dönüştürmek ve bu frame'leri hatasız bir şekilde iletmek.  Hata kontrolü, akış kontrolü ve ortam erişim kontrolü gibi işlevleri yerine getirir."
+                "id": "data-types", 
+                "text": "Veri Tipleri", 
+                "description": "Primitive ve Referans tipleri, farkları ve memory yönetimi."
               },
               {
-                "id":"mac-address",
-                "text":"MAC Adresi (Media Access Control Address)",
-                "description":"Cihazların ağ arayüz kartlarına (NIC) üretici tarafından atanan, benzersiz, 48 bitlik fiziksel adres.  Veri bağlantı katmanında, frame'lerin doğru hedefe ulaşmasını sağlar.",
-                              "subItems": [
-                {
-                  "id": "mac-address-structure",
-                  "text": "MAC Adresi Yapısı",
-                  "description": "48 bit uzunluğunda, 12 hexadecimal karakterle ifade edilir (örn. 00:1A:2B:3C:4D:5E). İlk 24 bit, üreticiyi (OUI - Organizationally Unique Identifier) tanımlar ve IANA tarafından atanır. Son 24 bit, üretici tarafından cihaza özgü olarak atanır."
-                },
-                {
-                  "id": "mac-address-example",
-                  "text": "MAC Adresi Örnekleri",
-                  "description": "7910.4567.abcd, 12-12-AA-BC-DE-FC, AB:CD:EF:12:34:56"
-                },
-                 {
-                  "id": "mac-address-finding",
-                  "text": "MAC Adresi Nasıl Bulunur?",
-                  "description": "Windows'ta `ipconfig /all` komutu ile."
-                }
-              ]
-            },
-            {
-              "id": "arp-protocol",
-              "text": "ARP (Address Resolution Protocol)",
-              "description": "Bir IP adresinin karşılık geldiği MAC adresini bulmak için kullanılan protokol.",
-              "subItems": [
-                {
-                  "id": "arp-request",
-                  "text": "ARP Request",
-                  "description": "Bir cihaz, hedef IP adresinin MAC adresini öğrenmek için ağa bir ARP Request (ARP İsteği) yayını yapar. Bu yayın, ağdaki tüm cihazlara gönderilir (broadcast)."
-                },
-                {
-                  "id": "arp-reply",
-                  "text": "ARP Reply",
-                  "description": "Hedef IP adresine sahip olan cihaz, kendi MAC adresini içeren bir ARP Reply (ARP Yanıtı) mesajı ile cevap verir."
-                },
-                {
-                  "id": "arp-opcode",
-                  "text":"ARP Opcode",
-                  "description":"ARP Request için OPCODE 1 kullanılır ve Hedef MAC adresi FFFF-FFFF-FFFF olur."
-                },
-                 {
-                  "id": "arp-cache",
-                  "text": "ARP Önbelleği (ARP Cache)",
-                  "description": "Cihazlar, öğrendikleri IP-MAC adresi eşleşmelerini bir süre boyunca ARP önbelleğinde tutar.  Bu, her iletişim için tekrar tekrar ARP sorgusu yapılmasını engeller. (`arp -a` komutu ile görüntülenebilir)"
-                }
-              ]
-            },
-             {
-              "id": "ethernet-switch",
-              "text": "Ethernet Switch (Anahtar)",
-              "description": "Veri bağlantı katmanında çalışan, ağ cihazlarını birbirine bağlayan ve frame'leri MAC adreslerine göre doğru portlara yönlendiren cihaz.",
-              "subItems": [
-                {
-                  "id": "switch-operation",
-                  "text": "Switch Çalışma Prensibi",
-                  "description": "Switch, bağlı olduğu cihazların MAC adreslerini öğrenir ve bir MAC adres tablosu (CAM tablosu) oluşturur.  Gelen frame'leri, hedef MAC adresine göre ilgili porta yönlendirir.  Bu, collision (çarpışma) olasılığını azaltır ve ağ performansını artırır."
-                },
-                 {
-                  "id": "mac-address-table",
-                  "text": "MAC Adres Tablosu (CAM Table)",
-                  "description": "Switch'in, hangi portta hangi MAC adresinin bulunduğunu tuttuğu tablo."
-                }
-              ]
-            }
-        ]
-      },
-       "layer3":{
-        "title":"Ağ Katmanı (Layer 3)",
-        "items":[
-          {
-            "id":"network-layer-intro",
-            "text":"Ağ Katmanı Hakkında",
-            "description":"Veri paketlerinin (datagram) kaynak cihazdan hedef cihaza, farklı ağlar üzerinden yönlendirilmesini (routing) sağlar.  IP (Internet Protocol) bu katmanın temel protokolüdür."
+                "id": "operators-control-flow", 
+                "text": "Operatörler ve Kontrol Akış Mekanizmaları", 
+                "description": "if/else, switch, döngüler ve operatörlerin kullanımı."
+              },
+              {
+                "id": "arrays-strings", 
+                "text": "Diziler ve String Sınıfı", 
+                "description": "Array kullanımı, String'in Immutability özelliği, StringBuilder vs StringBuffer."
+              },
+              {
+                "id": "methods", 
+                "text": "Metotlar", 
+                "description": "Method Overloading vs Method Overriding arasındaki farklar."
+              }
+            ]
           },
           {
-            "id":"ip-protocol",
-            "text":"IP (Internet Protocol)",
-            "description":"Ağ katmanının temel protokolüdür. Paketlerin yönlendirilmesi, adresleme ve paketlerin parçalanması/birleştirilmesi gibi işlevleri yerine getirir. 'Best effort' (en iyi çaba) prensibiyle çalışır; paketlerin hedefe ulaşması garanti edilmez.",
-             "subItems":[
-               {
-                "id":"ip-addressing",
-                "text":"IP Adresleme",
-                "description":"İnternete bağlanan her cihaza, mantıksal bir adres (IP adresi) atanır. IP adresleri, cihazların ağ üzerindeki konumunu belirler ve yönlendirme işleminin temelini oluşturur."
-               }
-             ]
+            "id": "oop-principles",
+            "text": "Nesne Yönelimli Programlama (OOP) Prensipleri",
+            "description": "Java'nın temelini oluşturan OOP prensipleri ve uygulamaları.",
+            "subItems": [
+              {
+                "id": "encapsulation", 
+                "text": "Encapsulation (Kapsülleme)", 
+                "description": "Veri ve davranışın bir sınıf içinde sarmalanması. Erişim belirleyiciler (public, private, protected, default) ve Getter/Setter metotları."
+              },
+              {
+                "id": "inheritance", 
+                "text": "Inheritance (Kalıtım)", 
+                "description": "Bir sınıfın başka bir sınıftan özelliklerini miras alması. extends anahtar kelimesi, super kullanımı ve 'IS-A' ilişkisi."
+              },
+              {
+                "id": "polymorphism", 
+                "text": "Polymorphism (Çok Biçimlilik)", 
+                "description": "Bir nesnenin farklı şekillerde davranabilme yeteneği. Statik ve Dinamik Polymorphism, instanceof operatörü, Upcasting/Downcasting."
+              },
+              {
+                "id": "abstraction", 
+                "text": "Abstraction (Soyutlama)", 
+                "description": "Karmaşıklığı yönetme mekanizması. abstract sınıflar/metotlar ve interface'ler."
+              }
+            ]
           },
           {
-            "id":"ipv4",
-            "text":"IPv4 (Internet Protocol version 4)",
-            "description":"En yaygın kullanılan IP adresleme standardı. 32 bitlik adresler kullanır (örn. 192.168.1.1).",
-            "subItems":[
+            "id": "java-concepts",
+            "text": "Java'da Önemli Kavramlar ve Sınıflar",
+            "description": "Java'da sıkça kullanılan kavramlar, anahtar kelimeler ve sınıflar.",
+            "subItems": [
               {
-                "id":"ipv4-address-classes",
-                "text":"IPv4 Adres Sınıfları",
-                "description":"A, B, C, D ve E sınıfları. Her sınıfın farklı bir adres aralığı ve ağ/host bit sayısı vardır.",
-                "subItems":[
-                  {"id":"class-a", "text":"Class A (0.0.0.0 - 127.255.255.255, subnet mask 255.0.0.0)"},
-                  {"id":"class-b", "text":"Class B (128.0.0.0 - 191.255.255.255, subnet mask 255.255.0.0)"},
-                  {"id":"class-c", "text":"Class C (192.0.0.0 - 223.255.255.255, subnet mask 255.255.255.0)"},
-                  {"id":"class-d", "text":"Class D (224.0.0.0 - 239.255.255.255, Multicast için)"},
-                  {"id":"class-e", "text":"Class E (240.0.0.0 - 255.255.255.255, Deneysel)"}
-                ]
+                "id": "final-keyword", 
+                "text": "final Anahtar Kelimesi", 
+                "description": "final değişkenler, metotlar ve sınıflar. Kullanım amaçları ve etkileri."
               },
               {
-                "id":"private-ip-addresses",
-                "text":"Özel (Private) IP Adresleri",
-                "description":"Yerel ağlarda (LAN) kullanılan, internete doğrudan erişimi olmayan IP adresleri. (10.0.0.0 - 10.255.255.255, 172.16.0.0 - 172.31.255.255, 192.168.0.0 - 192.168.255.255)",
-                 "subItems":[
-                    {"id":"private-ip-range-10", "text":"10.0.0.0 - 10.255.255.255"},
-                    {"id":"private-ip-range-172", "text":"172.16.0.0 - 172.31.255.255"},
-                    {"id":"private-ip-range-192", "text":"192.168.0.0 - 192.168.255.255"}
-                 ]
+                "id": "static-keyword", 
+                "text": "static Anahtar Kelimesi", 
+                "description": "static değişkenler, metotlar, bloklar ve nested sınıflar. Kullanım senaryoları."
               },
               {
-                "id":"classful-ipv4",
-                "text":"Classful IPv4",
-                "description":"IP adreslerinin sınıflara ayrıldığı (A, B, C) eski bir adresleme yöntemi.  Günümüzde yerini Classless (sınıfsız) adreslemeye bırakmıştır."
+                "id": "exception-handling", 
+                "text": "Exception Handling (İstisna Yönetimi)", 
+                "description": "try-catch-finally blokları, throw vs throws, Checked vs Unchecked Exceptions, özel Exception sınıfları."
               },
-               {
-                "id":"classless-ipv4",
-                "text":"Classless IPv4 (CIDR - Classless Inter-Domain Routing)",
-                "description":"Subnet mask (alt ağ maskesi) kullanarak IP adreslerini daha esnek bir şekilde bölümlere ayırmaya olanak tanıyan adresleme yöntemi.  Örn. 192.168.1.0/24 (buradaki /24, subnet mask'i belirtir)",
-                "subItems":[
-                  {
-                    "id":"subnet-mask-examples",
-                    "text":"Subnet Mask Örnekleri ve Gösterimleri",
-                    "description":"255.255.0.0 = /16, 255.255.255.128 = /25, 255.255.192.0 = /18"
-                  }
+              {
+                "id": "collections-framework", 
+                "text": "Java Collections Framework (JCF)", 
+                "description": "List (ArrayList, LinkedList), Set (HashSet, TreeSet), Map (HashMap, TreeMap), Queue yapıları ve kullanım senaryoları.",
+                "subItems": [
+                  {"id": "list", "text": "List: ArrayList, LinkedList", "description": "Sıralı koleksiyonlar için kullanılan yapılar."},
+                  {"id": "set", "text": "Set: HashSet, LinkedHashSet, TreeSet", "description": "Benzersiz eleman tutan koleksiyonlar. hashCode() ve equals() metotlarının önemi."},
+                  {"id": "map", "text": "Map: HashMap, LinkedHashMap, TreeMap", "description": "Anahtar-değer çiftleri tutan koleksiyonlar."},
+                  {"id": "queue", "text": "Queue: LinkedList, PriorityQueue, Deque", "description": "Kuyruk veri yapıları ve uygulamaları."}
                 ]
               }
             ]
           },
           {
-            "id":"ipv6",
-            "text":"IPv6 (Internet Protocol version 6)",
-            "description":"IPv4 adreslerinin tükenmesi sorununa çözüm olarak geliştirilen yeni nesil IP adresleme standardı. 128 bitlik adresler kullanır (örn. 2001:0db8:85a3:0000:0000:8a2e:0370:7334).",
-             "subItems":[
-               {
-                  "id": "ipv6-structure",
-                  "text": "IPv6 Adres Yapısı",
-                  "description": "128 bit, 8 grup 16 bitlik hexadecimal sayı (örn., 2001:0DB8:0000:0000:02AA:00FF:FE28:9C5A).  Kısaltma kuralları vardır (örn., 2001:0DB8::2AA:00FF:FE28:9C5A)."
-                }
-             ]
+            "id": "java8-features",
+            "text": "Java 8+ Özellikleri",
+            "description": "Java 8 ve sonrasında gelen önemli yenilikler ve özellikler.",
+            "subItems": [
+              {
+                "id": "lambda-expressions", 
+                "text": "Lambda Expressions", 
+                "description": "Fonksiyonel arayüzlerin (@FunctionalInterface) kısa yazımı ve kullanımı."
+              },
+              {
+                "id": "stream-api", 
+                "text": "Stream API", 
+                "description": "Koleksiyonlar üzerinde işlemler için kullanılan API (filter, map, flatMap, reduce, collect, sorted, forEach)."
+              },
+              {
+                "id": "optional", 
+                "text": "Optional Sınıfı", 
+                "description": "NullPointerException hatalarından kaçınma ve null kontrollerini basitleştirme."
+              },
+              {
+                "id": "date-time-api", 
+                "text": "Yeni Tarih/Zaman API'si", 
+                "description": "LocalDate, LocalTime, LocalDateTime, Instant, Duration, Period sınıfları."
+              },
+              {
+                "id": "interface-methods", 
+                "text": "Interface'lerde default ve static metotlar", 
+                "description": "Interface'lere uygulama ekleyebilme yeteneği."
+              }
+            ]
           },
           {
-            "id":"routing",
-            "text":"Routing (Yönlendirme)",
-            "description":"Paketlerin, kaynak cihazdan hedef cihaza ulaşması için izlemesi gereken yolun belirlenmesi işlemi.  Router (yönlendirici) adı verilen cihazlar tarafından yapılır.",
-            "subItems":[
+            "id": "annotations",
+            "text": "Java'da Anotasyonlar (Annotations)",
+            "description": "Java'da metadata tanımlamaya yarayan anotasyonlar ve kullanımları.",
+            "subItems": [
               {
-                "id":"routing-methods",
-                "text":"Routing Yöntemleri",
-                "description":"Connected (Doğrudan Bağlı), Static Routing (Statik Yönlendirme), Dynamic Routing (Dinamik Yönlendirme)",
-                "subItems":[
-                  {"id":"connected-routing","text":"Connected (Doğrudan Bağlı)"},
-                  {"id":"static-routing","text":"Static Routing (Statik Yönlendirme)", "description":"Yönlendirme tablolarının elle (manuel olarak) yapılandırıldığı yöntem."},
-                  {"id":"dynamic-routing","text":"Dynamic Routing (Dinamik Yönlendirme)", "description":"Yönlendirme tablolarının, yönlendirme protokolleri (RIP, OSPF, EIGRP, BGP) tarafından otomatik olarak oluşturulduğu ve güncellendiği yöntem."}
-                ]
+                "id": "annotation-basics", 
+                "text": "Anotasyon Nedir?", 
+                "description": "Anotasyonların amacı, çalışma zamanında veya derleme zamanında kullanılabilecek üst veriler."
               },
               {
-                "id":"routing-protocols",
-                "text":"Routing Protokolleri",
-                "description":"RIP, OSPF, EIGRP, IS-IS, BGP",
-                 "subItems":[
-                    {"id":"rip","text":"RIP (Routing Information Protocol)"},
-                    {"id":"ospf","text":"OSPF (Open Shortest Path First)"},
-                    {"id":"eigrp","text":"EIGRP (Enhanced Interior Gateway Routing Protocol)"},
-                    {"id":"is-is","text":"IS-IS (Intermediate System to Intermediate System)"},
-                    {"id":"bgp","text":"BGP (Border Gateway Protocol)"}
-                 ]
+                "id": "standard-annotations", 
+                "text": "Standart Anotasyonlar", 
+                "description": "@Override, @Deprecated, @SuppressWarnings, @FunctionalInterface ve kullanım amaçları."
               },
               {
-                "id":"redundant-topology",
-                "text":"Redundant (Yedekli) Topoloji",
-                "description":"Ağda, bir bileşenin arızalanması durumunda iletişimin kesilmemesi için yedekli yollar ve cihazlar kullanılması.",
-                "subItems":[
-                  {"id":"redundancy-protocols", "text":"Redundancy (Yedeklilik) Protokolleri", "description":"HSRP (Hot Standby Router Protocol), VRRP (Virtual Router Redundancy Protocol), GLBP (Gateway Load Balancing Protocol), LACP (Link Aggregation Control Protocol), mLAG (Multi-Chassis Link Aggregation Group), vPC (virtual Port Channel)"}
-                ]
+                "id": "meta-annotations", 
+                "text": "Meta-Anotasyonlar", 
+                "description": "@Target, @Retention, @Documented, @Inherited ve özel anotasyon oluşturma."
               }
             ]
           }
         ]
       },
-      "layer4":{
-        "title":"Taşıma Katmanı (Layer 4)",
-        "items":[
-           {
-            "id":"transport-layer-intro",
-            "text":"Taşıma Katmanı Hakkında",
-            "description":"Uygulama katmanındaki süreçler (process) arasında mantıksal iletişim sağlar. Verinin uçtan uca güvenilir (reliable) veya güvenilir olmayan (unreliable) bir şekilde iletilmesinden sorumludur."
-          },
+      "day1_afternoon": {
+        "title": "Spring Framework Temelleri (1. Gün Öğleden Sonra)",
+        "items": [
           {
-            "id":"tcp",
-            "text":"TCP (Transmission Control Protocol)",
-            "description":"Bağlantı yönelimli (connection-oriented), güvenilir bir iletim protokolüdür. Veri bütünlüğünü, sıralı iletimi ve akış kontrolünü sağlar.",
-            "subItems":[
+            "id": "spring-basics",
+            "text": "Spring Framework Temelleri",
+            "description": "Spring Framework'ün temel yapısı, bileşenleri ve amaçları.",
+            "subItems": [
               {
-                "id":"tcp-3-way-handshake",
-                "text":"TCP 3-Way Handshake (Üçlü El Sıkışma)",
-                "description":"TCP bağlantısı kurulurken, istemci (client) ve sunucu (server) arasında gerçekleşen üç adımlı işlem (SYN, SYN-ACK, ACK)."
+                "id": "spring-intro", 
+                "text": "Spring Framework Nedir?", 
+                "description": "Spring'in ortaya çıkış amacı, çözdüğü problemler ve sağladığı avantajlar."
               },
               {
-                "id":"tcp-retransmission",
-                "text":"TCP Retransmission (Yeniden İletim)",
-                "description":"Kayıp veya hatalı paketlerin, TCP tarafından otomatik olarak algılanıp yeniden gönderilmesi."
+                "id": "spring-modules", 
+                "text": "Spring Modülleri", 
+                "description": "Core Container, AOP, Data Access, Web MVC gibi temel Spring modülleri ve genel bakış."
               },
               {
-                "id":"tcp-flow-control",
-                "text":"TCP Flow Control (Akış Kontrolü)",
-                "description":"Alıcının (receiver) işleyebileceğinden daha fazla veri gönderilmesini engelleyen mekanizma. Alıcı, 'window' (pencere) boyutu ile göndericiyi bilgilendirir."
+                "id": "ioc-di", 
+                "text": "Inversion of Control (IoC) ve Dependency Injection (DI)", 
+                "description": "Bağımlılık yönetimini kolaylaştıran tasarım prensipleri ve Spring uygulamaları.",
+                "subItems": [
+                  {"id": "ioc-principle", "text": "IoC Prensibi", "description": "Kontrol akışının tersine çevrilmesi ve avantajları."},
+                  {"id": "di-types", "text": "DI Türleri", "description": "Constructor Injection, Setter Injection, Field Injection ve aralarındaki farklar."},
+                  {"id": "context-factory", "text": "ApplicationContext ve BeanFactory", "description": "Temel Spring konteynerleri ve farkları."}
+                ]
+              },
+              {
+                "id": "spring-beans", 
+                "text": "Spring Beans", 
+                "description": "Spring IoC konteyneri tarafından yönetilen nesneler.",
+                "subItems": [
+                  {"id": "bean-definition", "text": "Bean Tanımlama Yöntemleri", "description": "XML, Annotation, Java Config kullanarak bean tanımlama."},
+                  {"id": "bean-scopes", "text": "Bean Scope'ları", "description": "singleton, prototype, request, session gibi bean yaşam alanları."},
+                  {"id": "bean-lifecycle", "text": "Bean Yaşam Döngüsü", "description": "@PostConstruct, @PreDestroy ve bean yaşam döngüsü olayları."}
+                ]
               }
             ]
           },
           {
-            "id":"udp",
-            "text":"UDP (User Datagram Protocol)",
-            "description":"Bağlantısız (connectionless), güvenilir olmayan bir iletim protokolüdür.  TCP'ye göre daha hızlıdır, ancak veri bütünlüğü ve sıralı iletim garanti edilmez.  Genellikle gerçek zamanlı uygulamalarda (ses, video) kullanılır.",
-
+            "id": "spring-boot-intro",
+            "text": "Spring Boot'a Giriş ve Temel Özellikler",
+            "description": "Spring Boot'un Spring Framework üzerine getirdiği yenilikler ve kolaylıklar.",
+            "subItems": [
+              {
+                "id": "spring-boot-basics", 
+                "text": "Spring Boot Nedir?", 
+                "description": "Auto-configuration, Starter paketleri, Embedded sunucular gibi Spring Boot avantajları."
+              },
+              {
+                "id": "spring-boot-annotation", 
+                "text": "@SpringBootApplication Anotasyonu", 
+                "description": "@EnableAutoConfiguration, @ComponentScan, @Configuration bileşenleri."
+              },
+              {
+                "id": "spring-boot-annotations", 
+                "text": "Temel Spring Boot Anotasyonları", 
+                "description": "Stereotype, DI, Config ve Request Mapping anotasyonları.",
+                "subItems": [
+                  {"id": "stereotype-annotations", "text": "Stereotype Anotasyonları", "description": "@Component, @Service, @Repository, @Controller, @RestController"},
+                  {"id": "di-annotations", "text": "DI Anotasyonları", "description": "@Autowired, @Qualifier, @Primary"},
+                  {"id": "config-annotations", "text": "Config Anotasyonları", "description": "@Configuration, @Bean, @Value"},
+                  {"id": "request-mapping", "text": "Request Mapping Anotasyonları", "description": "@RequestMapping, @GetMapping, @PostMapping vb."}
+                ]
+              },
+              {
+                "id": "application-properties", 
+                "text": "application.properties vs application.yml", 
+                "description": "Spring Boot yapılandırması, profil yönetimi ve property tanımlamaları."
+              }
+            ]
+          },
+          {
+            "id": "design-principles",
+            "text": "Tasarım Prensipleri (Design Principles)",
+            "description": "İyi yazılım tasarımı için takip edilmesi gereken prensipler.",
+            "subItems": [
+              {
+                "id": "solid", 
+                "text": "SOLID Prensipleri", 
+                "description": "Sürdürülebilir ve esnek kod yazma prensipleri.",
+                "subItems": [
+                  {"id": "srp", "text": "Single Responsibility Principle", "description": "Bir sınıfın sadece bir sorumluluğu olmalıdır."},
+                  {"id": "ocp", "text": "Open/Closed Principle", "description": "Sınıflar genişletmeye açık ancak değişime kapalı olmalıdır."},
+                  {"id": "lsp", "text": "Liskov Substitution Principle", "description": "Alt sınıflar, üst sınıfların yerine geçebilmelidir."},
+                  {"id": "isp", "text": "Interface Segregation Principle", "description": "Büyük interface'ler yerine, küçük ve odaklanmış interface'ler tercih edilmelidir."},
+                  {"id": "dip", "text": "Dependency Inversion Principle", "description": "Yüksek seviyeli modüller, düşük seviyeli modüllere bağımlı olmamalıdır."}
+                ]
+              },
+              {
+                "id": "other-principles", 
+                "text": "DRY, KISS, YAGNI Prensipleri", 
+                "description": "Don't Repeat Yourself, Keep It Simple, Stupid!, You Aren't Gonna Need It prensipleri."
+              },
+              {
+                "id": "design-patterns", 
+                "text": "Yaygın Kullanılan Design Patterns", 
+                "description": "Singleton, Factory, Builder, Adapter, Decorator, Facade, Observer, Strategy gibi tasarım desenleri ve Spring'deki uygulamaları."
+              }
+            ]
+          },
+          {
+            "id": "project-learning",
+            "text": "Proje Üzerinden Öğrenme Önerileri",
+            "description": "Temel Spring Boot projeleri inceleyerek pratik yapma önerileri.",
+            "subItems": [
+              {
+                "id": "example-projects", 
+                "text": "Örnek Projeler", 
+                "description": "GitHub'da 'spring boot todo app', 'spring boot library management' gibi basit CRUD projelerini inceleme."
+              },
+              {
+                "id": "learning-topics", 
+                "text": "Öğrenilecek Konular", 
+                "description": "Katmanlı Mimari, DTO, REST API, Logging gibi temel konuları projeler üzerinden öğrenme."
+              }
+            ]
           }
         ]
       },
-      "layer7":{
-        "title":"Uygulama Katmanı (Layer 7)",
-        "items":[
+      "day2_morning": {
+        "title": "Web Uygulamaları ve Spring MVC (2. Gün Sabah)",
+        "items": [
           {
-            "id":"application-layer-intro",
-            "text":"Uygulama Katmanı Hakkında",
-            "description":"Kullanıcıların ağ uygulamalarıyla (web tarayıcıları, e-posta istemcileri, vb.) etkileşim kurmasını sağlayan katmandır.  HTTP, SMTP, DNS, FTP gibi protokoller bu katmanda çalışır."
-          },
+            "id": "spring-mvc-rest",
+            "text": "Spring MVC ile Web Uygulamaları ve REST API Geliştirme",
+            "description": "Spring MVC mimarisi ve RESTful API geliştirme prensipleri.",
+            "subItems": [
+              {
+                "id": "mvc-architecture", 
+                "text": "Spring MVC Mimarisi", 
+                "description": "DispatcherServlet, HandlerMapping, HandlerAdapter, ViewResolver / HttpMessageConverter bileşenleri."
+              },
+              {
+                "id": "controllers", 
+                "text": "Controller'lar ve İstek Karşılama", 
+                "description": "@RestController vs @Controller, istek parametrelerini alma ve yanıt oluşturma yöntemleri.",
+                "subItems": [
+                  {"id": "controller-types", "text": "@RestController vs @Controller", "description": "@ResponseBody kullanımı ve farkları."},
+                  {"id": "request-params", "text": "İstek Parametrelerini Alma", "description": "@PathVariable, @RequestParam, @RequestBody, @RequestHeader kullanımları."},
+                  {"id": "response-creation", "text": "Yanıt Oluşturma", "description": "ResponseEntity, @ResponseStatus kullanımları."}
+                ]
+              },
+              {
+                "id": "rest-principles", 
+                "text": "RESTful API Tasarım Prensipleri", 
+                "description": "Kaynak (Resource), URL tasarımı, HTTP metodları, durum kodları ve temel prensipler.",
+                "subItems": [
+                  {"id": "resource-url", "text": "Kaynak ve URL Tasarımı", "description": "Noun, çoğul, versiyonlama prensipleri."},
+                  {"id": "http-methods", "text": "HTTP Metodları", "description": "GET, POST, PUT, DELETE, PATCH kullanım amaçları."},
+                  {"id": "status-codes", "text": "HTTP Durum Kodları", "description": "2xx, 4xx, 5xx durum kodları ve anlamları."},
+                  {"id": "rest-principles", "text": "Idempotency, Safety, Statelessness", "description": "RESTful API tasarım prensipleri."}
+                ]
+              },
+              {
+                "id": "validation", 
+                "text": "Validation (Bean Validation API)", 
+                "description": "@Valid, @NotNull, @Size gibi anotasyonlarla veri doğrulama."
+              }
+            ]
+          }
+        ]
+      },
+      "day2_afternoon": {
+        "title": "Veri Erişimi ve Spring Data JPA (2. Gün Öğleden Sonra)",
+        "items": [
           {
-            "id":"well-known-ports",
-            "text":"Well-Known Port Numaraları",
-            "description":"Belirli uygulamaların kullandığı, standartlaştırılmış port numaraları (örn., HTTP: 80, HTTPS: 443, FTP: 20/21, SMTP: 25, DNS: 53).",
-            "subItems":[
-              {"id":"port-20-21", "text":"Port 20/21 (FTP): File Transfer Protocol"},
-              {"id":"port-22", "text":"Port 22 (SSH): Secure SHell"},
-              {"id":"port-23", "text":"Port 23 (Telnet): Telnet"},
-              {"id":"port-25", "text":"Port 25 (SMTP): Simple Mail Transfer Protocol"},
-              {"id":"port-53", "text":"Port 53 (DNS): Domain Name System"},
-              {"id":"port-80", "text":"Port 80 (HTTP): Hypertext Transfer Protocol"},
-              {"id":"port-110", "text":"Port 110 (POP3): Post Office Protocol version 3"},
-              {"id":"port-123", "text":"Port 123 (NTP): Network Time Protocol"},
-              {"id":"port-143", "text":"Port 143 (IMAP): Internet Message Access Protocol"},
-              {"id":"port-161-162", "text":"Port 161/162 (SNMP): Simple Network Management Protocol"},
-              {"id":"port-389", "text":"Port 389 (LDAP): Lightweight Directory Access Protocol"},
-              {"id":"port-443", "text":"Port 443 (HTTPS): HTTP Secure"}
+            "id": "spring-data-jpa",
+            "text": "Spring Data JPA ile Veritabanı İşlemleri",
+            "description": "JPA ve ORM kavramları, Spring Data JPA kullanımı.",
+            "subItems": [
+              {
+                "id": "jpa-orm", 
+                "text": "JPA ve ORM Kavramları", 
+                "description": "Hibernate, EntityManager, Persistence Context ve temel ORM kavramları."
+              },
+              {
+                "id": "spring-data-basics", 
+                "text": "Spring Data JPA Temelleri", 
+                "description": "Repository arayüzleri, sorgu metotları, @Query kullanımı.",
+                "subItems": [
+                  {"id": "repository-interfaces", "text": "Repository Arayüzleri", "description": "CrudRepository, PagingAndSortingRepository, JpaRepository"},
+                  {"id": "query-methods", "text": "Sorgu Metotları", "description": "Query Methods / Derived Queries kullanımı."},
+                  {"id": "query-annotation", "text": "@Query ve @Modifying", "description": "JPQL ve Native SQL sorguları yazma."},
+                  {"id": "projections", "text": "Projections", "description": "Veri sonuçlarını şekillendirme."}
+                ]
+              },
+              {
+                "id": "entity-definition", 
+                "text": "Entity (Varlık) Tanımlama", 
+                "description": "JPA entity tanımlama, anotasyonlar ve ilişki tipleri.",
+                "subItems": [
+                  {"id": "entity-annotations", "text": "Entity Anotasyonları", "description": "@Entity, @Table, @Id, @GeneratedValue, @Column, @Transient"},
+                  {"id": "relationship-types", "text": "İlişki Tipleri", "description": "@OneToOne, @OneToMany, @ManyToOne, @ManyToMany"},
+                  {"id": "relationship-details", "text": "İlişki Detayları", "description": "mappedBy, Fetch Type (LAZY vs EAGER), Cascade Type"},
+                  {"id": "embedded-entities", "text": "Gömülü Varlıklar", "description": "@Embeddable, @Embedded, @Version"}
+                ]
+              },
+              {
+                "id": "db-config", 
+                "text": "Veritabanı Konfigürasyonu", 
+                "description": "application.properties/yml içinde spring.datasource ve spring.jpa ayarları."
+              }
             ]
           },
-           {
-            "id":"dhcp",
-            "text":"DHCP (Dynamic Host Configuration Protocol)",
-            "description":"Ağdaki cihazlara otomatik olarak IP adresi, subnet mask, default gateway ve DNS sunucu bilgileri atayan protokol.",
-            "subItems":[
-              {"id":"dhcp-process","text":"DHCP İşlem Adımları", "description":"DHCPDiscover, DHCPOffer, DHCPRequest, DHCPAck"}
+          {
+            "id": "project-learning-2",
+            "text": "Proje Üzerinden Öğrenme Önerileri (Devam)",
+            "description": "Veri erişimi konularını projeler üzerinden pratik yapma.",
+            "subItems": [
+              {
+                "id": "project-exercises", 
+                "text": "Proje Egzersizleri", 
+                "description": "REST endpoint ekleme, entity ilişkileri kurma, JPQL sorguları yazma, validasyon ekleme."
+              },
+              {
+                "id": "learning-topics-2", 
+                "text": "Öğrenilecek Konular", 
+                "description": "Pageable (Sayfalama), Sort (Sıralama), Global Exception Handling (@ControllerAdvice)."
+              }
+            ]
+          }
+        ]
+      },
+      "day3_morning": {
+        "title": "İleri Konular ve Test (3. Gün Sabah)",
+        "items": [
+          {
+            "id": "spring-ecosystem",
+            "text": "Spring Ekosisteminden Önemli Konular",
+            "description": "Spring ekosistemindeki ileri düzey konular ve modüller.",
+            "subItems": [
+              {
+                "id": "spring-security", 
+                "text": "Spring Security Temelleri", 
+                "description": "Authentication vs Authorization, SecurityFilterChain, UserDetailsService, PasswordEncoder."
+              },
+              {
+                "id": "aop", 
+                "text": "AOP (Aspect-Oriented Programming)", 
+                "description": "Cross-Cutting Concerns, Aspect, Join Point, Advice, Pointcut kavramları."
+              },
+              {
+                "id": "spring-boot-actuator", 
+                "text": "Spring Boot Actuator", 
+                "description": "Uygulama sağlığı, metrikler ve temel endpoint'ler (/health, /info, /metrics)."
+              },
+              {
+                "id": "transaction-management", 
+                "text": "Transaction Management", 
+                "description": "ACID, @Transactional anotasyonu, Propagation Seviyeleri, Rollback Kuralları."
+              }
             ]
           },
           {
-            "id":"dns",
-            "text":"DNS (Domain Name System)",
-            "description":"Alan adlarını (domain name) IP adreslerine çeviren sistem (örn., www.google.com -> 172.217.16.196).",
-            "subItems":[
-              {"id":"dns-records", "text":"DNS Kayıtları (DNS Records)", "description":"A, AAAA, CNAME, MX, NS, TXT gibi farklı türlerde DNS kayıtları bulunur.  Bu kayıtlar, alan adlarıyla ilgili bilgileri (IP adresi, mail sunucusu, vb.) tutar."}
+            "id": "test-approaches",
+            "text": "Test Yaklaşımları",
+            "description": "Java ve Spring Boot uygulamaları için test stratejileri ve yöntemleri.",
+            "subItems": [
+              {
+                "id": "test-importance", 
+                "text": "Testin Önemi, Test Piramidi", 
+                "description": "Birim testleri, entegrasyon testleri ve uçtan uca testlerin dengesi."
+              },
+              {
+                "id": "unit-testing", 
+                "text": "Unit Testing (Birim Testler)", 
+                "description": "JUnit 5, Mockito kullanımı ve servis katmanı testleri.",
+                "subItems": [
+                  {"id": "junit5", "text": "JUnit 5", "description": "@Test, Assertions ve temel kullanım."},
+                  {"id": "mockito", "text": "Mockito", "description": "@Mock, @InjectMocks, when().thenReturn(), verify() kullanımı."},
+                  {"id": "service-tests", "text": "Servis Katmanı Testleri", "description": "Servis birimlerinin test edilmesi."}
+                ]
+              },
+              {
+                "id": "integration-testing", 
+                "text": "Integration Testing (Entegrasyon Testleri)", 
+                "description": "@SpringBootTest, MockMvc ile Controller testleri, @DataJpaTest."
+              }
+            ]
+          }
+        ]
+      },
+      "day3_afternoon": {
+        "title": "Diğer Teknolojiler ve CV Hazırlığı (3. Gün Öğleden Sonra)",
+        "items": [
+          {
+            "id": "other-technologies",
+            "text": "CV'de Bahsedilen Diğer Teknolojiler",
+            "description": "Apache Kafka, Apache Flink gibi teknolojilerin kavramsal anlatımı.",
+            "subItems": [
+              {
+                "id": "apache-kafka", 
+                "text": "Apache Kafka", 
+                "description": "Producer, Consumer, Topic, Partition, Broker gibi temel Kafka kavramları."
+              },
+              {
+                "id": "apache-flink", 
+                "text": "Apache Flink", 
+                "description": "DataStream, Sources, Sinks, Transformations, Stateful Computations gibi temel Flink kavramları."
+              },
+              {
+                "id": "framework-comparison", 
+                "text": "Django & .NET Karşılaştırması", 
+                "description": "Django, .NET ve Spring Boot arasındaki temel farklar, avantajlar/dezavantajlar."
+              }
             ]
           },
           {
-            "id":"http-https",
-            "text":"HTTP (Hypertext Transfer Protocol) ve HTTPS (HTTP Secure)",
-            "description":"Web sayfalarının görüntülenmesini sağlayan protokoller.  HTTPS, HTTP'nin şifrelenmiş (encrypted) versiyonudur ve daha güvenlidir.  SSL/TLS sertifikaları kullanılır.",
-             "subItems":[
-               {"id":"ssl-tls","text":"SSL/TLS Sertifikaları", "description":"Web sitelerinin kimliğini doğrulayan ve iletişimi şifreleyen dijital sertifikalar.  Comodo, Symantec, GeoTrust, Digicert, IdenTrust gibi sertifika otoriteleri tarafından verilir."}
-             ]
+            "id": "project-learning-3",
+            "text": "Proje Üzerinden Öğrenme Önerileri (İleri Seviye)",
+            "description": "İleri düzey konuların projeler üzerinden pekiştirilmesi.",
+            "subItems": [
+              {
+                "id": "advanced-exercises", 
+                "text": "İleri Seviye Egzersizler", 
+                "description": "Mockito ile Unit Test yazma, MockMvc ile Integration Test yazma, Actuator endpoint'leri inceleme."
+              },
+              {
+                "id": "learning-topics-3", 
+                "text": "Öğrenilecek Konular", 
+                "description": "Basit Spring Security yapılandırması, @Transactional kullanımı."
+              }
+            ]
+          }
+        ]
+      },
+      "day3_evening": {
+        "title": "CV ve Mülakat Hazırlığı (3. Gün Akşam)",
+        "items": [
+          {
+            "id": "softtech-internship",
+            "text": "Softtech Staj Deneyimi - Teknik Derinlemesine",
+            "description": "Staj deneyimiyle ilgili gelebilecek sorulara hazırlık.",
+            "subItems": [
+              {
+                "id": "pos-systems", 
+                "text": "POS Ödeme Sistemleri Geliştirmesi", 
+                "description": ".NET teknolojileri, geliştirilen modüller, karşılaşılan teknik problemler ve çözümleri."
+              },
+              {
+                "id": "tools-usage", 
+                "text": "Jira ve Azure DevOps Kullanımı", 
+                "description": "Geliştirme döngüsünde bu araçların nasıl kullanıldığı, branch, commit, PR, code review süreçleri."
+              },
+              {
+                "id": "enterprise-dev", 
+                "text": "Kurumsal Düzeyde Yazılım Geliştirme", 
+                "description": "Gözlemlenen iyi yazılım mühendisliği pratikleri, kod standartları, test süreçleri, CI/CD."
+              }
+            ]
+          },
+          {
+            "id": "tech-competencies",
+            "text": "Teknoloji Yetkinlikleri ve Projeler",
+            "description": "Farklı programlama dilleri ve teknolojilerdeki deneyimlerle ilgili sorulara hazırlık.",
+            "subItems": [
+              {
+                "id": "multiple-languages", 
+                "text": "Çoklu Dil Deneyimi (Python, Java, C#)", 
+                "description": "Farklı dillerde çalışmanın Java ekosistemindeki bir geliştirici olarak sağladığı avantajlar."
+              },
+              {
+                "id": "kafka-flink", 
+                "text": "Apache Kafka ve Apache Flink Deneyimi", 
+                "description": "Gerçek zamanlı veri işleme senaryoları, mimari yaklaşımlar, karşılaşılan zorluklar ve best practice'ler."
+              },
+              {
+                "id": "framework-comparison-2", 
+                "text": "Django ve .NET ile Spring Boot Karşılaştırması", 
+                "description": "Her bir framework'ün güçlü ve zayıf yönleri, kullanım senaryoları."
+              }
+            ]
+          },
+          {
+            "id": "etsy-experience",
+            "text": "Etsy E-Ticaret Deneyimi",
+            "description": "E-ticaret ve AI model geliştirme deneyimleriyle ilgili sorulara hazırlık.",
+            "subItems": [
+              {
+                "id": "ai-models", 
+                "text": "Özel AI Modelleri Geliştirme", 
+                "description": "Veri setleri, model seçimi, eğitim süreci, performans ölçümü ve iyileştirme yöntemleri."
+              },
+              {
+                "id": "ecommerce-ops", 
+                "text": "E-Ticaret Operasyonları", 
+                "description": "SEO, dijital pazarlama, analitik araçlar ve metrikler."
+              },
+              {
+                "id": "product-dev", 
+                "text": "Ürün Geliştirme Yaşam Döngüsü", 
+                "description": "Fikirden ürüne, müşteri geri bildirimlerini ürüne yansıtma deneyimleri."
+              }
+            ]
+          },
+          {
+            "id": "behavioral-questions",
+            "text": "Davranışsal Sorular ve CV Diğer Yetenekler",
+            "description": "Mülakatlarda sıkça sorulan davranışsal sorulara hazırlık.",
+            "subItems": [
+              {
+                "id": "chess-programming", 
+                "text": "Satranç Deneyiminin Yazılım Geliştirmeye Etkisi", 
+                "description": "Satranç geçmişinin problem çözme, analitik düşünme ve stratejik planlama becerilerine katkısı."
+              },
+              {
+                "id": "motivation", 
+                "text": "Garanti BBVA'da Çalışma Motivasyonu", 
+                "description": "Teknoloji stack'i, projeler ve kurum kültürü açısından cezbeden noktalar."
+              },
+              {
+                "id": "team-work", 
+                "text": "Takım Çalışması ve Fikir Ayrılıkları", 
+                "description": "Teknik yaklaşım konusunda fikir ayrılıklarını çözme deneyimleri."
+              },
+              {
+                "id": "learning-method", 
+                "text": "Yeni Teknoloji Öğrenme Yöntemi", 
+                "description": "Yeni bir programlama dili, framework veya teknoloji öğrenirken izlenen yöntemler."
+              },
+              {
+                "id": "career-vision", 
+                "text": "Kariyer Vizyonu", 
+                "description": "Teknik açıdan 3-5 yıl içinde hedeflenen uzmanlık alanları ve teknolojiler."
+              }
+            ]
+          },
+          {
+            "id": "interview-closing",
+            "text": "Mülakat Kapanışı",
+            "description": "Mülakat sonunda sorulabilecek sorulara ve kapanış stratejisine hazırlık.",
+            "subItems": [
+              {
+                "id": "questions-to-ask", 
+                "text": "Mülakatta Sorulacak Sorular", 
+                "description": "Garanti BBVA Teknoloji'deki pozisyon, takım yapısı, teknolojiler ve gelişim fırsatlarıyla ilgili sorular."
+              },
+              {
+                "id": "final-pitch", 
+                "text": "Final Değerlendirme", 
+                "description": "Pozisyona neden en uygun aday olduğunuzu düşündüğünüzü ve katacağınız değeri özetleyen kapanış cümlesi."
+              }
+            ]
           }
         ]
       }
     }
   }
 };
+
+export default todoData;
